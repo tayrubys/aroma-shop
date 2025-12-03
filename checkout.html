@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aroma Shop - Ödeme Sayfası</title>
+  <link rel="icon" href="img/Fevicon.png" type="image/png">
+
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
+  <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="Aroma Logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+              <li class="nav-item"><a class="nav-link" href="vizyonmisyon.html">Misyon & Vizyon</a></li>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ürünlerimiz</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="categoryt.html">Taylor Swift</a></li>
+                  <li class="nav-item"><a class="nav-link" href="categorytb.html">Billie Eilish</a></li>
+                  <li class="nav-item"><a class="nav-link" href="categoryartic.html">Arctic Monkeys</a></li>
+                  <li class="nav-item"><a class="nav-link" href="categoryttumalbum.html">Hepsi</a></li>
+                </ul>
+              </li>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Birimlerimiz</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="lojistik.html">Lojistik ve Dağıtım</a></li>
+                  <li class="nav-item"><a class="nav-link" href="musteri-iliskileri.html">Müşteri İlişkileri</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="duyurular.html">Duyurular</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+            </ul>
+
+            <ul class="nav-shop">
+              <li><button><i class="ti-search"></i></button></li>
+              <li> <a href="cart.html">
+                  <button>
+                    <i class="ti-shopping-cart"></i>
+                    <span class="nav-shop__circle">2</span>
+                  </button>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="blog-banner-area" id="category">
+    <div class="container h-100">
+      <div class="blog-banner">
+        <div class="text-center">
+          <h1>Ödeme İşlemleri</h1>
+          <nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Ana Sayfa</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Ödeme</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="checkout_area section-margin--small">
+    <div class="container">
+
+      <div class="cupon_area">
+        <div class="check_title">
+          <h2>İndirim kuponunuz var mı? <a href="#">Kodu girmek için tıklayın</a></h2>
+        </div>
+        <input type="text" placeholder="Kupon kodunu girin">
+        <a class="button button-coupon" href="#">Kuponu Uygula</a>
+      </div>
+
+      <div class="billing_details">
+        <div class="row">
+          <div class="col-lg-8">
+            <h3>Fatura ve Teslimat Bilgileri</h3>
+            <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+              <div class="col-md-6 form-group p_star">
+                <input type="text" class="form-control" id="first" name="name" placeholder="Adınız">
+              </div>
+              <div class="col-md-6 form-group p_star">
+                <input type="text" class="form-control" id="last" name="name" placeholder="Soyadınız">
+              </div>
+              <div class="col-md-12 form-group">
+                <input type="text" class="form-control" id="company" name="company"
+                  placeholder="Şirket Adı (Opsiyonel)">
+              </div>
+              <div class="col-md-6 form-group p_star">
+                <input type="text" class="form-control" id="number" name="number" placeholder="Telefon Numarası">
+              </div>
+              <div class="col-md-6 form-group p_star">
+                <input type="text" class="form-control" id="email" name="compemailany" placeholder="Email Adresi">
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <select class="country_select">
+                  <option value="1">Türkiye</option>
+                  <option value="2">Kıbrıs</option>
+                </select>
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <select class="country_select">
+                  <option value="1">İstanbul</option>
+                  <option value="2">Ankara</option>
+                  <option value="3">İzmir</option>
+                  <option value="4">Kocaeli</option>
+                  <option value="5">Diğer</option>
+                </select>
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <input type="text" class="form-control" id="add1" name="add1"
+                  placeholder="Adres Satırı 1 (Mahalle, Cadde)">
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <input type="text" class="form-control" id="add2" name="add2"
+                  placeholder="Adres Satırı 2 (Bina No, Daire)">
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <input type="text" class="form-control" id="city" name="city" placeholder="İlçe">
+              </div>
+              <div class="col-md-12 form-group">
+                <input type="text" class="form-control" id="zip" name="zip" placeholder="Posta Kodu">
+              </div>
+
+              <div class="col-md-12 form-group mb-0">
+                <div class="creat_account">
+                  <h3>Kargo Detayları</h3>
+                  <input type="checkbox" id="f-option3" name="selector">
+                  <label for="f-option3">Farklı bir adrese gönder?</label>
+                </div>
+                <textarea class="form-control" name="message" id="message" rows="1"
+                  placeholder="Sipariş Notlarınız (Örn: Zili çalmayın)"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <div class="order_box">
+              <h2>Siparişiniz</h2>
+              <ul class="list">
+                <li><a href="#">
+                    <h4>Ürün <span>Toplam</span></h4>
+                  </a></li>
+
+                <li>
+                  <a href="#">Taylor Swift - Midnights <span class="middle">x 01</span> <span
+                      class="last">$25.00</span></a>
+                </li>
+                <li>
+                  <a href="#">Charli XCX - Brat <span class="middle">x 01</span> <span class="last">$24.99</span></a>
+                </li>
+              </ul>
+              <ul class="list list_2">
+                <li><a href="#">Ara Toplam <span>$49.99</span></a></li>
+                <li><a href="#">Kargo <span>Ücretsiz (Kampanya)</span></a></li>
+                <li><a href="#">Genel Toplam <span>$49.99</span></a></li>
+              </ul>
+
+              <div class="payment_item">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option5" name="selector">
+                  <label for="f-option5">Havale / EFT</label>
+                  <div class="check"></div>
+                </div>
+                <p>Ödemeyi lütfen banka hesap numaralarımıza yapınız. Açıklama kısmına sipariş numaranızı yazmayı
+                  unutmayın.</p>
+              </div>
+              <div class="payment_item active">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option6" name="selector">
+                  <label for="f-option6">Kredi Kartı / Banka Kartı </label>
+                  <img src="img/product/card.jpg" alt="">
+                  <div class="check"></div>
+                </div>
+                <p>Güvenli ödeme altyapısı ile kredi kartınızla anında ödeme yapabilirsiniz.</p>
+              </div>
+              <div class="creat_account">
+                <input type="checkbox" id="f-option4" name="selector">
+                <label for="f-option4">Okudum ve onaylıyorum: </label>
+                <a href="#">Satış Sözleşmesi*</a>
+              </div>
+              <div class="text-center">
+                <a class="button button-paypal" href="javascript:void(0);" id="complete-order-btn">Siparişi Tamamla</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-area">
+      <div class="container">
+        <div class="row section_gap">
+
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget tp_widgets">
+              <h4 class="footer_title large_title">Biz Kimiz?</h4>
+              <p>
+                Aroma, dünya müziğinin en sevilen yabancı albümlerini kolayca bulup
+                keşfedebileceğiniz modern ve kullanıcı dostu bir albüm satış platformudur.
+              </p>
+            </div>
+          </div>
+
+          <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+            <div class="single-footer-widget tp_widgets">
+              <h4 class="footer_title">Hızlı Linkler</h4>
+              <ul class="list">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="categoryttumalbum.html">Albüm Mağazası</a></li>
+                <li><a href="#">Duyurular</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget tp_widgets">
+              <h4 class="footer_title">İletişim</h4>
+              <div class="ml-40">
+                <p class="sm-head"> <span class="fa fa-location-arrow"></span> Adres </p>
+                <p>Kocaeli, Türkiye</p>
+
+                <p class="sm-head"> <span class="fa fa-phone"></span> Telefon </p>
+                <p> +90 555 555 55 55 <br> +90 212 555 55 55 </p>
+
+                <p class="sm-head"> <span class="fa fa-envelope"></span> E-mail </p>
+                <p> info@aroma-music.com <br> www.aroma-music.com </p>
+
+                <p class="sm-head" style="margin-top: 15px;"> <span class="fa fa-code"></span> Tasarım </p>
+                <p>Bu web sitesi: <strong>tayrubys</strong> tarafından tasarlanmıştır.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="footer-text text-center">
+            ©
+            <script>document.write(new Date().getFullYear());</script> Aroma Albüm Satış Sitesi – Tüm Hakları Saklıdır.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/skrollr.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+  <script src="vendors/jquery.ajaxchimp.min.js"></script>
+  <script src="vendors/mail-script.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#complete-order-btn').click(function (e) {
+        e.preventDefault();
+
+        // Ekrana uyarı ver
+        alert("Siparişiniz başarıyla alındı! Teşekkür ederiz.");
+
+        // Onay sayfasına yönlendir
+        window.location.href = "confirmation.html";
+      });
+    });
+  </script>
+
+</body>
+
+</html>

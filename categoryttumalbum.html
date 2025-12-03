@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aroma Shop - Category</title>
+  <link rel="icon" href="img/Fevicon.png" type="image/png">
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
+  <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+
+  <style>
+    .artist-slider-container {
+      width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      height: 230px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .artist-slide {
+      display: none;
+      height: 100%;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+      position: absolute;
+      inset: 0;
+      transition: opacity .6s ease-in-out;
+    }
+
+    .artist-slide.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .artist-slide h4 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .artist-slide p {
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: .95;
+      margin-bottom: 16px;
+    }
+
+    .artist-slide .btn {
+      padding: 6px 18px;
+      border-radius: 18px;
+      font-weight: 600;
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--================ Start Header Menu Area =================-->
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="Aroma Logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="vizyonmisyon.html">Misyon &
+                  Vizyon</a></li>
+
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ürünlerimiz</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="categoryt.html">Taylor Swift</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="categorytb.html">Billie Eilish</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="categoryartic.html">Arctic
+                      Monkeys</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="categoryttumalbum.html">Hepsi</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Birimlerimiz</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="lojistik.html">Lojistik ve
+                      Dağıtım</a></li>
+                  <li class="nav-item"><a class="nav-link" href="musteri-iliskileri.html">Müşteri
+                      İlişkileri</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="duyurular.html">Duyurular</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+            </ul>
+
+            <ul class="nav-shop">
+              <li><button><i class="ti-search"></i></button></li>
+              <li> <a href="cart.html">
+                  <button>
+                    <i class="ti-shopping-cart"></i>
+                    <span class="nav-shop__circle">2</span>
+                  </button>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--================ End Header Menu Area =================-->
+  <!-- ================ start banner area ================= -->
+  <section class="blog-banner-area" id="category">
+    <div class="container h-100">
+      <div class="blog-banner">
+        <div class="text-center">
+          <h1>Albumler</h1>
+          <nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ end banner area ================= -->
+
+
+  <!-- ================ category section start ================= -->
+  <section class="section-margin--small mb-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3">
+          <!-- ======= Aroma Shop Artist Slider (7 Sanatçı) ======= -->
+          <div class="artist-slider-container">
+
+            <!-- 1. Taylor Swift -->
+            <div class="artist-slide active" style="background: linear-gradient(135deg, #ff5f7e, #7a0032);">
+              <h4>Taylor Swift Koleksiyonu</h4>
+              <p>Aroma Shop’ta Taylor Swift albümlerine özel fırsatlar sizi bekliyor!</p>
+            </div>
+
+            <!-- 2. Billie Eilish -->
+            <div class="artist-slide" style="background: linear-gradient(135deg, #1db954, #0d3826);">
+              <h4>Billie Eilish Koleksiyonu</h4>
+              <p>Billie Eilish'in albümleri geniş stok ve hızlı teslimat ile burada.</p>
+            </div>
+
+            <!-- 3. Arctic Monkeys -->
+            <div class="artist-slide" style="background: linear-gradient(135deg, #8b0000, #2c2c2c);">
+              <h4>Arctic Monkeys Koleksiyonu</h4>
+              <p>Rock efsanelerinin ikonik albümleri Aroma Shop’ta yeniden stokta!</p>
+            </div>
+
+            <!-- 4. The Weeknd -->
+            <div class="artist-slide" style="background: linear-gradient(135deg, #5e0cff, #180038);">
+              <h4>The Weeknd Koleksiyonu</h4>
+              <p>After Hours’tan Dawn FM’e… The Weeknd diskografisi özel fiyatlarla!</p>
+            </div>
+
+            <!-- 5. Charli XCX -->
+            <div class="artist-slide" style="background: linear-gradient(135deg, #ff00c8, #52003f);">
+              <h4>Charli XCX Koleksiyonu</h4>
+              <p>Hyperpop kraliçesi Charli XCX’in albümleri Aroma Shop’ta!</p>
+            </div>
+
+            <!-- 6. Jennie -->
+            <div class="artist-slide" style="background: linear-gradient(135deg, #000, #ff66a6);">
+              <h4>Jennie Koleksiyonu</h4>
+              <p>Solo ve özel sürüm Jennie albümlerini hemen keşfet!</p>
+            </div>
+
+            <!-- 7. Doechii -->
+            <div class="artist-slide" style="background: linear-gradient(135deg, #ff9900, #3d1e00);">
+              <h4>Doechii Koleksiyonu</h4>
+              <p>Rap ve R&B’nin yükselen yıldızı Doechii’nin albümleri burada!</p>
+            </div>
+            <!-- 8. katseye -->
+            <div class="artist-slide" style="background: linear-gradient(135deg, #7f00ff, #2a004d);">
+              <h4>Katseye Koleksiyonu</h4>
+              <p>Katseye’nin özel projeleri ve sınırlı baskı albümleri Aroma Shop’ta!</p>
+              <a class="btn btn-light btn-sm" href="#">Hepsini Gör</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-xl-9 col-lg-8 col-md-7">
+          <!-- Start Best Seller -->
+          <section class="lattest-product-area pb-40 category-list">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/charlie/brat.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Charli XCX </p>
+                    <h4 class="card-product__title"><a href="single-product2.html">Brat</a></h4>
+                    <p class="card-product__price">$20.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/taylor'album/midnights.jpg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Taylor Swift</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Midnights</a></h4>
+                    <p class="card-product__price">$24.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/katseye.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Katseye</p>
+                    <h4 class="card-product__title"><a href="#">
+                        Beautiful Chaos</a></h4>
+                    <p class="card-product__price">$20.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/oliviarodrigo.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Olivia Rodrigo</p>
+                    <h4 class="card-product__title"><a href="single-product5.html">GUTS</a></h4>
+                    <p class="card-product__price">$22.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/theweeknd.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>The Weeknd</p>
+                    <h4 class="card-product__title"><a href="#">Hurry Up Tomorrow</a></h4>
+                    <p class="card-product__price">$22.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/207509-lady-gaga-mayhem.jpg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Lady Gaga</p>
+                    <h4 class="card-product__title"><a href="#">Mayhem</a></h4>
+                    <p class="card-product__price">$24.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="img-fluid" src="album_img/jennie/jenniealbum.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Jennie</p>
+                    <h4 class="card-product__title"><a href="single-product3.html">Ruby</a></h4>
+                    <p class="card-product__price">$24.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/taylor'album/thetorturedpoetsdep.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Taylor Swift</p>
+                    <h4 class="card-product__title"><a href="#">The Tortured Poets Department</a></h4>
+                    <p class="card-product__price">$27.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="img-fluid" src="album_img/billie/billiealbum.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Billie Eilish</p>
+                    <h4 class="card-product__title"><a href="single-product4.html">Hit Me Hard and Soft</a></h4>
+                    <p class="card-product__price">$24.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/Layover.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>V</p>
+                    <h4 class="card-product__title"><a href="#">Layover</a></h4>
+                    <p class="card-product__price">$21.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/doechii.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Doechii</p>
+                    <h4 class="card-product__title"><a href="#">Alligator Bites Never Heal</a></h4>
+                    <p class="card-product__price">$20.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/arcticmonkeys/fwn.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Arctic Monkeys</p>
+                    <h4 class="card-product__title"><a href="#">Favourite Worst Nightmare</a></h4>
+                    <p class="card-product__price">$21.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/afterhours.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>The Weeknd</p>
+                    <h4 class="card-product__title"><a href="#">After Hours</a></h4>
+                    <p class="card-product__price">$23.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/sour.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Olivia Rodrigo</p>
+                    <h4 class="card-product__title"><a href="#">Sour</a></h4>
+                    <p class="card-product__price">$21.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/supernatural.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>NewJeans</p>
+                    <h4 class="card-product__title"><a href="#">Supernatural</a></h4>
+                    <p class="card-product__price">$20.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/charlie/how.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Charli XCX</p>
+                    <h4 class="card-product__title"><a href="#">how i'm feeling now</a></h4>
+                    <p class="card-product__price">$24.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/getup.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>NewJeans</p>
+                    <h4 class="card-product__title"><a href="#">Get Up</a></h4>
+                    <p class="card-product__price">$19.99</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="album_img/billie/dsae.jpeg" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Billie Eilish</p>
+                    <h4 class="card-product__title"><a href="#">Don't Smile at Me </a></h4>
+                    <p class="card-product__price">$17.99</p>
+                  </div>
+                </div>
+              </div>
+          </section>
+          <!-- End Best Seller -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ category section end ================= -->
+  <!--================ Start footer Area  =================-->
+  <!--================ Start footer Area  =================-->
+  <footer class="footer">
+    <div class="footer-area">
+      <div class="container">
+        <div class="row section_gap">
+
+          <!-- Mission -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget tp_widgets">
+              <h4 class="footer_title large_title">Biz Kimiz?</h4>
+              <p>
+                Aroma, dünya müziğinin en sevilen yabancı albümlerini kolayca bulup
+                keşfedebileceğiniz modern ve kullanıcı dostu bir albüm satış platformudur.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+            <div class="single-footer-widget tp_widgets">
+              <h4 class="footer_title">Hızlı Linkler</h4>
+              <ul class="list">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="categoryttumalbum.html">Albüm Mağazası</a></li>
+                <li><a href="#">Duyurular</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Contact + Social -->
+          <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget tp_widgets">
+              <h4 class="footer_title">İletişim</h4>
+              <div class="ml-40">
+
+                <p class="sm-head">
+                  <span class="fa fa-location-arrow"></span>
+                  Adres
+                </p>
+                <p>Kocaeli, Türkiye</p>
+
+                <p class="sm-head">
+                  <span class="fa fa-phone"></span>
+                  Telefon
+                </p>
+                <p>
+                  +90 555 555 55 55 <br>
+                  +90 212 555 55 55
+                </p>
+
+                <p class="sm-head">
+                  <span class="fa fa-envelope"></span>
+                  E-mail
+                </p>
+                <p>
+                  info@aroma-music.com <br>
+                  www.aroma-music.com
+                </p>
+
+                <p class="sm-head">
+                  <span class="fa fa-share-alt"></span>
+                  Sosyal Medya
+                </p>
+                <p class="social-links">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                </p>
+
+                <p class="sm-head" style="margin-top: 15px;">
+                  <span class="fa fa-code"></span>
+                  Tasarım
+                </p>
+                <p>Bu web sitesi: <strong>tayrubys</strong> tarafından tasarlanmıştır.</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="footer-text text-center">
+            ©
+            <script>document.write(new Date().getFullYear());</script>
+            Aroma Albüm Satış Sitesi – Tüm Hakları Saklıdır.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--================ End footer Area  =================-->
+
+
+  <script>
+    let artistIndex = 0;
+    const artistSlides = document.querySelectorAll(".artist-slide");
+
+    setInterval(() => {
+      artistSlides[artistIndex].classList.remove("active");
+      artistIndex = (artistIndex + 1) % artistSlides.length;
+      artistSlides[artistIndex].classList.add("active");
+    }, 3500);
+  </script>
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/skrollr.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+  <script src="vendors/nouislider/nouislider.min.js"></script>
+  <script src="vendors/jquery.ajaxchimp.min.js"></script>
+  <script src="vendors/mail-script.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

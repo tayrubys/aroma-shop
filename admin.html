@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli - Aroma Shop</title>
+    <link rel="icon" href="img/Fevicon.png" type="image/png">
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .admin-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card h3 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .stat-card p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-card i {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 45px;
+            opacity: 0.3;
+        }
+
+        .bg-blue {
+            background: linear-gradient(45deg, #384aeb, #5d6ff3);
+        }
+
+        .bg-green {
+            background: linear-gradient(45deg, #28a745, #4bdd6d);
+        }
+
+        .bg-orange {
+            background: linear-gradient(45deg, #ffc107, #ffdb66);
+        }
+
+        .bg-red {
+            background: linear-gradient(45deg, #dc3545, #f56e7b);
+        }
+
+        .nav-tabs .nav-link {
+            color: #555;
+            font-weight: 600;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #384aeb;
+            border-color: #dee2e6 #dee2e6 #fff;
+        }
+
+        .product-thumb {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* --- ÖZEL DOSYA YÜKLEME BUTONLARI --- */
+        .file-upload-wrapper {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        /* Gerçek input'u gizle ama işlevsel bırak */
+        .file-upload-wrapper input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        /* Bizim tasarladığımız buton */
+        .custom-file-btn {
+            display: inline-block;
+            background-color: #f1f6f7;
+            color: #384aeb;
+            border: 1px dashed #384aeb;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .file-upload-wrapper:hover .custom-file-btn {
+            background-color: #384aeb;
+            color: #fff;
+        }
+
+        /* Seçilen dosya adı */
+        .file-name-display {
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #777;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container">
+                    <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="duyurular.html">Duyurular Sayfası</a></li>
+                        <li class="nav-item"><a class="nav-link" href="categoryttumalbum.html">Ürünler Sayfası</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="section-intro pb-40px text-center">
+            <h2>Admin <span class="section-intro__style">Yönetim Paneli</span></h2>
+        </div>
+
+        <ul class="nav nav-tabs mb-4" id="adminTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="dash-tab" data-toggle="tab" href="#dashboardPanel" role="tab">📊
+                    İstatistikler</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="duyuru-tab" data-toggle="tab" href="#duyuruPanel" role="tab">📢 Duyuru
+                    İşlemleri</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="urun-tab" data-toggle="tab" href="#urunPanel" role="tab">🎵 Ürün İşlemleri</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+
+            <div class="tab-pane fade show active" id="dashboardPanel" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="stat-card bg-blue">
+                            <i class="fas fa-compact-disc"></i>
+                            <h3 id="statTotalProduct">0</h3>
+                            <p>Toplam Albüm</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card bg-green">
+                            <i class="fas fa-bullhorn"></i>
+                            <h3 id="statTotalDuyuru">0</h3>
+                            <p>Aktif Duyuru</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card bg-orange">
+                            <i class="fas fa-users"></i>
+                            <h3>1,452</h3>
+                            <p>Kayıtlı Üye</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card bg-red">
+                            <i class="fas fa-dollar-sign"></i>
+                            <h3>$18,500</h3>
+                            <p>Toplam Ciro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="admin-card">
+                            <h4><i class="ti-bar-chart"></i> Aylık Satış İstatistikleri (2025)</h4>
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="admin-card">
+                            <h4><i class="ti-pie-chart"></i> Kategori Dağılımı</h4>
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="duyuruPanel" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="admin-card">
+                            <h4>Duyuru Ekle</h4>
+                            <hr>
+                            <form id="addDuyuruForm">
+                                <div class="form-group">
+                                    <label>Başlık</label>
+                                    <input type="text" class="form-control" id="d_title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tarih</label>
+                                    <input type="date" class="form-control" id="d_date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>İçerik</label>
+                                    <textarea class="form-control" id="d_content" rows="2" required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Duyuru Görseli</label>
+                                    <div class="file-upload-wrapper">
+                                        <input type="file" id="d_img_file" accept="image/*"
+                                            onchange="updateFileName(this, 'img_name_display')">
+                                        <div class="custom-file-btn">
+                                            <i class="ti-image"></i> Görsel Seç
+                                        </div>
+                                        <span id="img_name_display" class="file-name-display">Dosya seçilmedi</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Ek Dosya (PDF / Word)</label>
+                                    <div class="file-upload-wrapper">
+                                        <input type="file" id="d_doc_file" accept=".pdf,.doc,.docx"
+                                            onchange="updateFileName(this, 'doc_name_display')">
+                                        <div class="custom-file-btn">
+                                            <i class="ti-clip"></i> Dosya Seç
+                                        </div>
+                                        <span id="doc_name_display" class="file-name-display">Dosya seçilmedi</span>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="button button--active button-sm w-100">Yayınla</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="admin-card">
+                            <h4>Yayındaki Duyurular</h4>
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Görsel</th>
+                                        <th>Başlık</th>
+                                        <th>Tarih</th>
+                                        <th>Ek Dosya</th>
+                                        <th>Sil</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="duyuruList"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="urunPanel" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="admin-card">
+                            <h4><i class="ti-plus"></i> Ürün Ekle</h4>
+                            <hr>
+                            <form id="addUrunForm">
+                                <div class="form-group"><label>Albüm Adı</label><input type="text" class="form-control"
+                                        id="u_name" required></div>
+                                <div class="form-group"><label>Sanatçı</label><input type="text" class="form-control"
+                                        id="u_cat"></div>
+                                <div class="form-group"><label>Fiyat ($)</label><input type="number"
+                                        class="form-control" id="u_price"></div>
+                                <div class="form-group"><label>Resim Yolu</label><input type="text" class="form-control"
+                                        id="u_img" value="album_img/stok.jpg"></div>
+                                <button type="submit" class="button button--active button-sm w-100">Ürünü Ekle</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="admin-card">
+                            <h4>Mevcut Ürün Listesi</h4>
+                            <div class="table-responsive" style="max-height: 600px; overflow-y: auto;">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Görsel</th>
+                                            <th>Albüm Adı</th>
+                                            <th>Fiyat</th>
+                                            <th>İşlem</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="urunList"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // DOSYA İSMİNİ GÜNCELLEYEN FONKSİYON
+        function updateFileName(input, spanId) {
+            var fileName = input.files[0] ? input.files[0].name : "Dosya seçilmedi";
+            document.getElementById(spanId).innerText = fileName;
+        }
+
+        $(document).ready(function () {
+            initDuyurular();
+            initUrunler();
+            renderCharts();
+            updateStats();
+
+            // --- ÜRÜN EKLEME ---
+            $('#addUrunForm').on('submit', function (e) {
+                e.preventDefault();
+                let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
+                urunler.unshift({
+                    id: Date.now(),
+                    name: $('#u_name').val(),
+                    category: $('#u_cat').val(),
+                    price: $('#u_price').val(),
+                    img: $('#u_img').val()
+                });
+                localStorage.setItem('aroma_urunler', JSON.stringify(urunler));
+                renderUrunList();
+                updateStats();
+                $('#addUrunForm')[0].reset();
+                alert('Ürün eklendi!');
+            });
+
+            // --- DUYURU EKLEME ---
+            $('#addDuyuruForm').on('submit', function (e) {
+                e.preventDefault();
+
+                // Resim
+                let imgPath = 'album_img/stok.jpg';
+                const imgInput = document.getElementById('d_img_file');
+                if (imgInput.files.length > 0) {
+                    imgPath = 'album_img/' + imgInput.files[0].name;
+                }
+
+                // Belge
+                let docData = null;
+                const docInput = document.getElementById('d_doc_file');
+                if (docInput.files.length > 0) {
+                    const file = docInput.files[0];
+                    let icon = 'fa-file-alt';
+                    if (file.name.endsWith('.pdf')) icon = 'fa-file-pdf';
+                    if (file.name.endsWith('.doc') || file.name.endsWith('.docx')) icon = 'fa-file-word';
+
+                    docData = { name: file.name, url: '#', icon: icon };
+                }
+
+                let duyurular = JSON.parse(localStorage.getItem('aroma_duyurular')) || [];
+                duyurular.push({
+                    id: Date.now(),
+                    title: $('#d_title').val(),
+                    date: $('#d_date').val(),
+                    content: $('#d_content').val(),
+                    img: imgPath,
+                    document: docData
+                });
+
+                localStorage.setItem('aroma_duyurular', JSON.stringify(duyurular));
+                renderDuyuruList();
+                updateStats();
+                $('#addDuyuruForm')[0].reset();
+
+                // Dosya isimlerini sıfırla
+                $('#img_name_display').text("Dosya seçilmedi");
+                $('#doc_name_display').text("Dosya seçilmedi");
+
+                alert('Duyuru yayınlandı!');
+            });
+        });
+
+        // --- CHART JS ---
+        function renderCharts() {
+            const ctx1 = document.getElementById('salesChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran'],
+                    datasets: [{
+                        label: 'Satış', data: [65, 59, 80, 81, 156, 105],
+                        backgroundColor: '#384aeb'
+                    }]
+                }
+            });
+            const ctx2 = document.getElementById('categoryChart').getContext('2d');
+            new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Pop', 'Rock', 'K-Pop', 'R&B'],
+                    datasets: [{
+                        data: [40, 20, 30, 10],
+                        backgroundColor: ['#384aeb', '#ffc107', '#dc3545', '#28a745']
+                    }]
+                }
+            });
+        }
+
+        function updateStats() {
+            let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
+            let duyurular = JSON.parse(localStorage.getItem('aroma_duyurular')) || [];
+            $('#statTotalProduct').text(urunler.length);
+            $('#statTotalDuyuru').text(duyurular.length);
+        }
+
+        /*function initDuyurular() {
+            let duyurular = JSON.parse(localStorage.getItem('aroma_duyurular'));
+            if (!duyurular || duyurular.length === 0) {
+                duyurular = [
+                    { id: 101, title: "Poppy – Empty Hands Ön Sipariş", date: "2025-11-28", content: "23 Ocak 2026 çıkış.", img: "album_img/empty.jpg", document: { name: "Basin_Bulteni.docx", icon: "fa-file-word" } },
+                    { id: 105, title: "%10 İndirim Kampanyası", date: "2025-11-10", content: "Sepette indirim.", img: "album_img/indirim.png", document: { name: "Kampanya_Kosullari.pdf", icon: "fa-file-pdf" } },
+                    { id: 102, title: "Yeni Stoklar", date: "2025-11-25", content: "Stoklar geldi.", img: "album_img/stok.jpg", document: null },
+                    { id: 103, title: "Hafta Sonu", date: "2025-11-20", content: "2 al 1 öde.", img: "album_img/kampanya.jpg", document: null },
+                    { id: 104, title: "Kargo Bedava", date: "2025-11-15", content: "Kargo bizden.", img: "album_img/kargo.jpg", document: null }
+                ];
+                localStorage.setItem('aroma_duyurular', JSON.stringify(duyurular));
+            }
+            renderDuyuruList();
+        }
+*/
+        function initDuyurular() {
+            let duyurular = JSON.parse(localStorage.getItem('aroma_duyurular'));
+
+            // Eğer veri yoksa veya boşsa, Anasayfandaki verileri yükle
+            if (!duyurular || duyurular.length === 0) {
+                duyurular = [
+                    {
+                        id: 1,
+                        title: "100$ Üzeri Alışverişe %10 İndirim",
+                        date: "2025-11-28",
+                        content: "Belirli ürünlerde geçerli büyük fırsat! Sepet toplamınız 100$ ve üzerine ulaştığında, toplam tutar üzerinden anında %10 indirim kazanacaksınız. Kupon kodu girmenize gerek yok, sistem otomatik düşer.",
+                        img: "album_img/indirim.png",
+                        document: { name: "indirim.pdf", icon: "fa-file-pdf" }
+                    },
+                    {
+                        id: 2,
+                        title: "75$ Üzeri Alışverişe Kargo Ücretsiz",
+                        date: "2025-11-27",
+                        content: "Online mağazada geçerli ücretsiz kargo kampanyası başladı. Sepet tutarınız 75$ ve üzerine ulaştığında, kargo ücreti otomatik olarak tarafımızdan karşılanmaktadır.",
+                        img: "album_img/kargo.jpg",
+                        document: null
+                    },
+                    {
+                        id: 3,
+                        title: "Hafta Sonu Kampanyası (2 Al 1 Öde)",
+                        date: "2025-11-25",
+                        content: "Bu hafta sonuna özel kaçırılmayacak bir fırsat seni bekliyor. Seçili sanatçıların (Taylor Swift, The Weeknd) favori albümlerinden sepetine 3 tane ekle, sadece 2 tanesinin ücretini öde!",
+                        img: "album_img/kampanya.jpg",
+                        document: null
+                    },
+                    {
+                        id: 4,
+                        title: "Yeni Albüm Stokları Geldi",
+                        date: "2025-11-24",
+                        content: "Müzikseverlerin yoğun ilgisi nedeniyle tükenen birçok favori albüm, bu sabah itibarıyla depolarımıza tekrar giriş yaptı. Özellikle 'Ruby' albümü stoklarda!",
+                        img: "album_img/stok.jpg",
+                        document: null
+                    },
+                    {
+                        id: 5,
+                        title: "Poppy – Empty Hands Albümü Ön Siparişte!",
+                        date: "2025-11-22",
+                        content: "Poppy'nin merakla beklenen yeni stüdyo albümü 'Empty Hands' için geri sayım başladı. 23 Ocak 2026 çıkış tarihli albüm ön siparişe açıldı. İlk 100 siparişe poster hediye!",
+                        img: "album_img/empty.jpg",
+                        document: { name: "basin_bulteni.docx", icon: "fa-file-word" }
+                    }
+                ];
+                localStorage.setItem('aroma_duyurular', JSON.stringify(duyurular));
+            }
+            renderDuyuruList();
+        }
+        function renderDuyuruList() {
+            let duyurular = JSON.parse(localStorage.getItem('aroma_duyurular')) || [];
+            let html = '';
+            duyurular.sort((a, b) => new Date(b.date) - new Date(a.date));
+            duyurular.forEach(item => {
+                let docBadge = item.document ?
+                    `<span class="badge badge-light border"><i class="fas ${item.document.icon} text-primary"></i> Dosya Var</span>` :
+                    '<span class="text-muted small">-</span>';
+
+                html += `<tr><td><img src="${item.img}" class="product-thumb"></td><td>${item.title}</td><td>${item.date}</td><td>${docBadge}</td><td><button class="btn btn-danger btn-sm" onclick="deleteItem('aroma_duyurular', ${item.id})"><i class="fas fa-trash"></i> Sil</button></td></tr>`;
+            });
+            $('#duyuruList').html(html);
+        }
+
+        function initUrunler() { renderUrunList(); }
+        function renderUrunList() {
+            let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
+            let html = '';
+            urunler.forEach(item => {
+                html += `<tr><td><img src="${item.img}" class="product-thumb"></td><td><strong>${item.name}</strong><br><small>${item.category}</small></td><td>$${item.price}</td><td><button class="btn btn-danger btn-sm" onclick="deleteItem('aroma_urunler', ${item.id})"><i class="fas fa-trash"></i> Sil</button></td></tr>`;
+            });
+            $('#urunList').html(html);
+        }
+
+        function deleteItem(key, id) {
+            if (confirm('Silinsin mi?')) {
+                let items = JSON.parse(localStorage.getItem(key)) || [];
+                items = items.filter(i => i.id !== id);
+                localStorage.setItem(key, JSON.stringify(items));
+                if (key === 'aroma_urunler') renderUrunList(); else renderDuyuruList();
+                updateStats();
+            }
+        }
+    </script>
+</body>
+
+</html>

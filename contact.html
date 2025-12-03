@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aroma Shop - İletişim</title>
+  <link rel="icon" href="img/Fevicon.png" type="image/png">
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Harita çerçevesi ayarları */
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      /* 16:9 oranı korur */
+      position: relative;
+      height: 0;
+    }
+
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+
+    /* Mobilde harita çok yüksek yer kaplamasın diye yükseklik ayarı */
+    @media (max-width: 768px) {
+      .map-container-custom {
+        height: 300px;
+      }
+
+      .map-container-custom iframe {
+        height: 300px !important;
+      }
+    }
+
+    /* Bilgisayarda harita yüksekliği */
+    @media (min-width: 769px) {
+      .map-container-custom iframe {
+        height: 450px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="Aroma Logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+
+              <li class="nav-item"><a class="nav-link" href="vizyonmisyon.html">Misyon &
+                  Vizyon</a></li>
+
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ürünlerimiz</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="categoryt.html">Taylor Swift</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="categorytb.html">Billie Eilish</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="categoryartic.html">Arctic
+                      Monkeys</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="categoryttumalbum.html">Hepsi</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Birimlerimiz</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="lojistik.html">Lojistik ve
+                      Dağıtım</a></li>
+                  <li class="nav-item"><a class="nav-link" href="musteri-iliskileri.html">Müşteri
+                      İlişkileri</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="duyurular.html">Duyurular</a></li>
+              <li class="nav-item active"><a class="nav-link" href="contact.html">İletişim</a></li>
+            </ul>
+
+            <ul class="nav-shop">
+              <li><button><i class="ti-search"></i></button></li>
+              <li> <a href="cart.html">
+                  <button>
+                    <i class="ti-shopping-cart"></i>
+                    <span class="nav-shop__circle">2</span>
+                  </button>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="blog-banner-area" id="contact">
+    <div class="container h-100">
+      <div class="blog-banner">
+        <div class="text-center">
+          <h1>İletişim & Şikayet</h1>
+          <nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+              <li class="breadcrumb-item active" aria-current="page">İletişim</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-margin--small">
+    <div class="container">
+
+      <div class="mb-5 pb-4 map-container-custom">
+        <iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://maps.google.com/maps?q=Cumhuriyet+Cd,+İzmit&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-home"></i></span>
+            <div class="media-body">
+              <h3>Kocaeli, Türkiye</h3>
+              <p>Cumhuriyet Cd. İzmit Merkez</p>
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-headphone"></i></span>
+            <div class="media-body">
+              <h3><a href="tel:02125555555">+90 212 555 55 55</a></h3>
+              <p>Pzt - Cum 09:00 - 18:00</p>
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-email"></i></span>
+            <div class="media-body">
+              <h3><a href="mailto:info@aroma-music.com">info@aroma-music.com</a></h3>
+              <p>Bize her zaman yazabilirsiniz!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8 col-lg-9">
+          <div class="mb-3">
+            <h3>Şikayet ve Öneri Formu</h3>
+            <p>Görüşleriniz bizim için değerlidir. Lütfen formu doldurarak bize iletiniz.</p>
+          </div>
+          <form class="form-contact contact_form" id="contactForm" novalidate="novalidate">
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="form-group">
+                  <input class="form-control" name="name" id="name" type="text" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" name="email" id="email" type="email" placeholder="E-posta Adresiniz"
+                    required>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" name="subject" id="subject" type="text" placeholder="Şikayet/Öneri Konusu"
+                    required>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="form-group">
+                  <textarea class="form-control different-control w-100" name="message" id="message" cols="30" rows="5"
+                    placeholder="Mesajınız..." required></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-group text-center text-md-right mt-3">
+              <button type="submit" class="button button--active button-contactForm">Gönder</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Form elementini seçiyoruz
+    const form = document.getElementById('contactForm');
+
+    // Form gönderildiğinde çalışacak kod
+    form.addEventListener('submit', function (event) {
+
+      // 1. Sayfanın yenilenmesini engelle (Standart submit işlemini durdur)
+      event.preventDefault();
+
+      // 2. Girdileri al
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+
+      // 3. Basit Doğrulama: Alanlar boş mu?
+      if (name === "" || email === "" || subject === "" || message === "") {
+        alert("Lütfen tüm alanları doldurunuz!");
+      } else {
+        // Bu işlem kullanıcının mail uygulamasını açar ve verileri oraya taşır.
+        // encodeURIComponent: Türkçe karakterlerin linkte bozulmaması için kullanılır.
+        var mailToLink = "mailto:info@aroma-music.com"
+          + "?subject=" + encodeURIComponent(subject)
+          + "&body=" + encodeURIComponent("Gönderen: " + name + "\nE-posta: " + email + "\n\nMesaj:\n" + message);
+
+        // Mail uygulamasını açmaya çalış
+        window.location.href = mailToLink;
+
+        // 5. Senin İsteğin: Ekrana bilgi mesajı ver
+        // (Mail uygulaması açıldıktan hemen sonra bu uyarı çıkar)
+        setTimeout(function () {
+          alert("Şikayetiniz/Öneriniz işleme alınmıştır. Mail uygulamanız üzerinden gönderimi tamamlayabilirsiniz.");
+          // 6. Formu temizle
+          form.reset();
+        }, 500); // Yarım saniye gecikmeli çalışır ki önce mail açılsın
+      }
+    });
+  </script>
+  <footer class="footer">
+    <div class="footer-area">
+      <div class="container">
+        <div class="row section_gap">
+
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget tp_widgets">
+              <h4 class="footer_title large_title">Biz Kimiz?</h4>
+              <p>
+                Aroma, dünya müziğinin en sevilen yabancı albümlerini kolayca bulup
+                keşfedebileceğiniz modern ve kullanıcı dostu bir albüm satış platformudur.
+              </p>
+            </div>
+          </div>
+
+          <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+            <div class="single-footer-widget tp_widgets">
+              <h4 class="footer_title">Hızlı Linkler</h4>
+              <ul class="list">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="categoryttumalbum.html">Albüm Mağazası</a></li>
+                <li><a href="#">Duyurular</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget tp_widgets">
+              <h4 class="footer_title">İletişim</h4>
+              <div class="ml-40">
+
+                <p class="sm-head">
+                  <span class="fa fa-location-arrow"></span>
+                  Adres
+                </p>
+                <p>Kocaeli, Türkiye</p>
+
+                <p class="sm-head">
+                  <span class="fa fa-phone"></span>
+                  Telefon
+                </p>
+                <p>
+                  +90 555 555 55 55 <br>
+                  +90 212 555 55 55
+                </p>
+
+                <p class="sm-head">
+                  <span class="fa fa-envelope"></span>
+                  E-mail
+                </p>
+                <p>
+                  info@aroma-music.com <br>
+                  www.aroma-music.com
+                </p>
+
+                <p class="sm-head">
+                  <span class="fa fa-share-alt"></span>
+                  Sosyal Medya
+                </p>
+                <p class="social-links">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                </p>
+
+                <p class="sm-head" style="margin-top: 15px;">
+                  <span class="fa fa-code"></span>
+                  Tasarım
+                </p>
+                <p>Bu web sitesi: <strong>tayrubys</strong> tarafından tasarlanmıştır.</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="footer-text text-center">
+            ©
+            <script>document.write(new Date().getFullYear());</script> Aroma Albüm Satış Sitesi – Tüm
+            Hakları Saklıdır.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/skrollr.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+  <script src="vendors/jquery.form.js"></script>
+  <script src="vendors/jquery.validate.min.js"></script>
+  <script src="vendors/contact.js"></script>
+  <script src="vendors/jquery.ajaxchimp.min.js"></script>
+  <script src="vendors/mail-script.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

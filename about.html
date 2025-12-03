@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Shop - Hakkımızda</title>
+    <link rel="icon" href="img/Fevicon.png" type="image/png">
+
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .about-section {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 20px;
+            /* Daha modern ovallik */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-img img:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-content h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .about-content .sub-title {
+            color: #384aeb;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+            font-size: 14px;
+        }
+
+        .about-content p {
+            color: #777;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 25px;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: #444;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li i {
+            color: #384aeb;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        /* --- YENİ EKLENEN MODERN İSTATİSTİK BÖLÜMÜ CSS --- */
+        .stats-section {
+            padding: 100px 0;
+            background-color: #f6f8fd;
+            /* Sitenin temasına uygun çok açık mavi-gri */
+            position: relative;
+        }
+
+        /* İstatistik Kartları */
+        .stat-card {
+            background: #fff;
+            padding: 40px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            /* Çok hafif, şık gölge */
+            transition: all 0.4s ease;
+            border-bottom: 3px solid transparent;
+            /* Alt çizgi için hazırlık */
+            height: 100%;
+        }
+
+        /* Hover Efekti: Kart yukarı kalkar ve gölgesi mavileşir */
+        .stat-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(56, 74, 235, 0.15);
+            border-bottom: 3px solid #384aeb;
+        }
+
+        /* İkon Kutusu */
+        .stat-icon-box {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: #f0f4ff;
+            /* İkon arkası açık mavi */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #384aeb;
+            font-size: 32px;
+            transition: all 0.4s ease;
+        }
+
+        /* Hoverda İkon Kutusu */
+        .stat-card:hover .stat-icon-box {
+            background: #384aeb;
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(56, 74, 235, 0.3);
+        }
+
+        .counter {
+            font-size: 42px;
+            font-weight: 800;
+            color: #222;
+            display: block;
+            margin-bottom: 5px;
+            font-family: "Roboto", sans-serif;
+            /* Font uyumu */
+        }
+
+        .stat-label {
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #777;
+            font-weight: 600;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="Aroma Logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent">
+                        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="vizyonmisyon.html">Misyon &
+                                    Vizyon</a></li>
+
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ürünlerimiz</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="categoryt.html">Taylor Swift</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="categorytb.html">Billie Eilish</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="categoryartic.html">Arctic
+                                            Monkeys</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="categoryttumalbum.html">Hepsi</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Birimlerimiz</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="lojistik.html">Lojistik ve
+                                            Dağıtım</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="musteri-iliskileri.html">Müşteri
+                                            İlişkileri</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="duyurular.html">Duyurular</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+                        </ul>
+                        <ul class="nav-shop">
+                            <li><button><i class="ti-search"></i></button></li>
+                            <li> <a href="cart.html">
+                                    <button>
+                                        <i class="ti-shopping-cart"></i>
+                                        <span class="nav-shop__circle">2</span>
+                                    </button>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="blog-banner-area" id="about">
+        <div class="container h-100">
+            <div class="blog-banner">
+                <div class="text-center">
+                    <h1>Hakkımızda</h1>
+                    <nav aria-label="breadcrumb" class="banner-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Hakkımızda</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-img">
+                        <img class="img-fluid" src="album_img/aroma.jpg" alt="Aroma Shop Mağaza İçi">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content pl-lg-4">
+                        <span class="sub-title">Hikayemiz</span>
+                        <h3>Müziğin Ritmi <br>Aroma'da Yakalanır.</h3>
+                        <p>
+                            Aroma Shop, dijital çağın hızına inat, müziği sadece bir veri dosyası olarak değil,
+                            elle tutulur bir sanat eseri olarak görenler için 2024 yılında kuruldu.
+                            Bizim için bir albüm; kapağındaki sanattan CD kitapçığındaki şarkı sözlerine kadar bütünsel
+                            bir deneyimdir.
+                        </p>
+                        <p>
+                            Dünyaca ünlü sanatçıların en yeni albümlerinden, hayranı olduğunuz grupların özel versiyon
+                            (Deluxe) CD baskılarına kadar
+                            en güncel arşivi Türkiye'deki müzikseverlerle buluşturuyoruz.
+                        </p>
+
+                        <ul class="feature-list">
+                            <li><i class="ti-check"></i> %100 Orijinal Bandrollü CD'ler</li>
+                            <li><i class="ti-package"></i> Özel Korumalı Kargo Paketleme</li>
+                            <li><i class="ti-headphone-alt"></i> 7/24 Müşteri Desteği</li>
+                        </ul>
+
+                        <a href="contact.html" class="button button--active mt-4">Bizimle İletişime Geçin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-intro pb-60px text-center">
+                <p>Verilerle Aroma</p>
+                <h2>Rakamlarla <span class="section-intro__style">Başarımız</span></h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-card">
+                        <div class="stat-icon-box">
+                            <i class="ti-music-alt"></i>
+                        </div>
+                        <span class="counter" id="dynamicAlbumCount" data-target="0">0</span>
+                        <span class="stat-label">Albüm Çeşidi</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-card">
+                        <div class="stat-icon-box">
+                            <i class="ti-bag"></i>
+                        </div>
+                        <span class="counter" data-target="15400">0</span>
+                        <span class="stat-label">Satılan Albüm</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-card">
+                        <div class="stat-icon-box">
+                            <i class="ti-face-smile"></i>
+                        </div>
+                        <span class="counter" data-target="8500">0</span>
+                        <span class="stat-label">Mutlu Müşteri</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-card">
+                        <div class="stat-icon-box">
+                            <i class="ti-truck"></i>
+                        </div>
+                        <span class="counter" data-target="81">0</span>
+                        <span class="stat-label">Hizmet Verilen İl</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-area">
+            <div class="container">
+                <div class="row section_gap">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget tp_widgets">
+                            <h4 class="footer_title large_title">Biz Kimiz?</h4>
+                            <p>
+                                Aroma, dünya müziğinin en sevilen yabancı albümlerini kolayca bulup
+                                keşfedebileceğiniz modern ve kullanıcı dostu bir albüm satış platformudur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+                        <div class="single-footer-widget tp_widgets">
+                            <h4 class="footer_title">Hızlı Linkler</h4>
+                            <ul class="list">
+                                <li><a href="index.html">Ana Sayfa</a></li>
+                                <li><a href="categoryttumalbum.html">Albüm Mağazası</a></li>
+                                <li><a href="#">Duyurular</a></li>
+                                <li><a href="about.html">Hakkımızda</a></li>
+                                <li><a href="contact.html">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget tp_widgets">
+                            <h4 class="footer_title">İletişim</h4>
+                            <div class="ml-40">
+                                <p class="sm-head"><span class="fa fa-location-arrow"></span> Adres</p>
+                                <p>Kocaeli, Türkiye</p>
+                                <p class="sm-head"><span class="fa fa-phone"></span> Telefon</p>
+                                <p>+90 555 555 55 55 <br> +90 212 555 55 55</p>
+                                <p class="sm-head"><span class="fa fa-envelope"></span> E-mail</p>
+                                <p>info@aroma-music.com <br> www.aroma-music.com</p>
+                                <p class="sm-head"><span class="fa fa-share-alt"></span> Sosyal Medya</p>
+                                <p class="social-links">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
+                                </p>
+                                <p class="sm-head" style="margin-top: 15px;"><span class="fa fa-code"></span> Tasarım
+                                </p>
+                                <p>Bu web sitesi: <strong>tayrubys</strong> tarafından tasarlanmıştır.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="footer-text text-center">
+                        ©
+                        <script>document.write(new Date().getFullYear());</script> Aroma Albüm Satış Sitesi – Tüm
+                        Hakları Saklıdır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // 1. Admin Panelindeki Veriyi Çek (LocalStorage)
+            let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
+            let gercekSayi = urunler.length;
+
+            // Eğer hiç ürün yoksa (admin panel boşsa) 0 yerine varsayılan bir sayı
+            if (gercekSayi === 0) gercekSayi = 150;
+
+            // HTML'e hedef sayıyı ata
+            $('#dynamicAlbumCount').attr('data-target', gercekSayi);
+
+            // 2. Sayaç Animasyonu Fonksiyonu
+            const runCounter = () => {
+                $('.counter').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-target');
+
+                    $({ countNum: $this.text() }).animate({
+                        countNum: countTo
+                    },
+                        {
+                            duration: 2000, // 2 saniye sürsün
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.ceil(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum + (this.countNum > 1000 ? "+" : ""));
+                            }
+                        });
+                });
+            }
+
+            // 3. Ekrana geldiğinde çalıştır (Scroll Event)
+            let counted = false;
+            $(window).scroll(function () {
+                // Bölüm ekranda var mı kontrol et
+                if ($('.stats-section').length) {
+                    var oTop = $('.stats-section').offset().top - window.innerHeight;
+                    if (counted == false && $(window).scrollTop() > oTop) {
+                        runCounter();
+                        counted = true;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
