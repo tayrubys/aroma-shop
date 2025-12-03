@@ -21,7 +21,29 @@
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="stylesheet" href="css/index.css">
+  <style>
+    .hero-slider,
+    .hero-slider .slides,
+    .hero-slider .slides img {
+      height: 250px;
+      /* Telefonda 250px gayet iyidir */
+      width: 100%;
+      object-fit: cover;
+      /* Resmi bozmadan kutuya sığdır */
+      object-position: center;
+      overflow: hidden;
+      /* Taşan kısımları gizle (titremeyi önler) */
+    }
 
+    @media (min-width: 768px) {
+
+      .hero-slider,
+      .hero-slider .slides,
+      .hero-slider .slides img {
+        height: 250px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -160,7 +182,7 @@
               </div>
               <div class="card-body">
                 <p>Lady Gaga</p>
-                <h4 class="card-product__title"><a href="single-product.html">Mayhem</a></h4>
+                <h4 class="card-product__title"><a href="#">Mayhem</a></h4>
                 <p class="card-product__price">$24.00</p>
               </div>
             </div>
@@ -176,7 +198,7 @@
               </div>
               <div class="card-body">
                 <p>Doechii</p>
-                <h4 class="card-product__title"><a href="single-product.html">Alligator Bites Never Heal</a></h4>
+                <h4 class="card-product__title"><a href="#">Alligator Bites Never Heal</a></h4>
                 <p class="card-product__price">$20.00</p>
               </div>
             </div>
@@ -192,7 +214,7 @@
               </div>
               <div class="card-body">
                 <p>The Weeknd</p>
-                <h4 class="card-product__title"><a href="single-product.html">Hurry Up Tomorrow</a></h4>
+                <h4 class="card-product__title"><a href="#">Hurry Up Tomorrow</a></h4>
                 <p class="card-product__price">$22.00</p>
               </div>
             </div>
@@ -224,7 +246,7 @@
               </div>
               <div class="card-body">
                 <p>Katseye</p>
-                <h4 class="card-product__title"><a href="single-product.html">
+                <h4 class="card-product__title"><a href="#">
                     Beautiful Chaos</a></h4>
                 <p class="card-product__price">$20.00</p>
               </div>
@@ -241,7 +263,7 @@
               </div>
               <div class="card-body">
                 <p>V</p>
-                <h4 class="card-product__title"><a href="single-product.html">Layover</a></h4>
+                <h4 class="card-product__title"><a href="#">Layover</a></h4>
                 <p class="card-product__price">$20.00</p>
               </div>
             </div>
@@ -257,8 +279,8 @@
               </div>
               <div class="card-body">
                 <p>Charli XCX </p>
-                <h4 class="card-product__title"><a href="#">Brat</a></h4>
-                <p class="card-product__price">$20.00</p>
+                <h4 class="card-product__title"><a href="single-product2.html">Brat</a></h4>
+                <p class="card-product__price">$24.99</p>
               </div>
             </div>
           </div>
