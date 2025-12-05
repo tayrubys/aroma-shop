@@ -17,7 +17,93 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="css/index.css">
+    <style>
+        /* Kartın dış gövdesi */
+        .modern-form-card {
+            background: #fff;
+            padding: 45px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            /* Yumuşak Gölge */
+            border: none;
+        }
 
+        /* Form Başlığı */
+        .form-header {
+            margin-bottom: 30px;
+        }
+
+        .form-header h3 {
+            font-weight: 700;
+            color: #222;
+        }
+
+        .form-header p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Etiketler */
+        .custom-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* İkon Kutusu */
+        .input-group-text {
+            background: #f4f6f8;
+            border: none;
+            color: #384aeb;
+            /* Tema rengi */
+            border-radius: 8px 0 0 8px !important;
+        }
+
+        /* Input Alanları */
+        .form-control-modern {
+            background-color: #f4f6f8;
+            border: 2px solid transparent;
+            height: 50px;
+            border-radius: 0 8px 8px 0 !important;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control-modern:focus {
+            background-color: #fff;
+            border-color: #384aeb;
+            box-shadow: 0 5px 15px rgba(56, 74, 235, 0.1);
+        }
+
+        /* Modern Buton */
+        .modern-btn {
+            background: linear-gradient(90deg, #384aeb 0%, #5d6ff3 100%);
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(56, 74, 235, 0.2);
+            transition: all 0.3s;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .modern-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(56, 74, 235, 0.3);
+            color: #fff;
+        }
+
+        /* Select kutusu yükseklik ayarı */
+        select.form-control-modern {
+            height: 50px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -98,6 +184,12 @@
                                 <li class="breadcrumb-item active" aria-current="page">Birimlerimiz</li>
                             </ol>
                         </nav>
+                        <p>Satış sonrası destek ekibimiz, siparişlerinizle ilgili sorunları çözmek için burada.</p>
+                        <p>Satın aldığınız ürünlerle ilgili <b>iade, değişim veya hasar/kusur</b> bildirimlerinizi
+                            aşağıdaki form üzerinden birimimize iletebilirsiniz. </p>
+                        <p><i>Not: Genel görüş ve önerileriniz için lütfen <a href="contact.html"
+                                    style="font-weight: bold; color: #384aeb;">İletişim</a> sayfasını
+                                kullanınız.</i></p>
                     </div>
                 </div>
             </div>
@@ -173,37 +265,68 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2">
-                        <div id="basariMesaji" class="alert alert-success text-center" role="alert"
-                            style="display: none; margin-bottom: 20px;">
-                            <i class="fas fa-check-circle"></i>
-                            <p> İade talebiniz başarıyla alınmıştır!</p>
-                        </div>
-                        <div style="border: 1px solid #ddd; padding: 30px; border-radius: 10px;">
-                            <h3 class="text-center mb-4">İade Talep Formu</h3>
-                            <form id="iadeFormu" action="#" method="get">
-                                <div class="form-group">
-                                    <label>Adınız Soyadınız:</label>
-                                    <input type="text" class="form-control" placeholder="İsminizi giriniz" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Sipariş Numarası (Varsa):</label>
-                                    <input type="number" class="form-control" placeholder="Örn: 12345">
-                                </div>
-
-                                <div class="form-group">
-                                    <label>İade Sebebiniz:</label> <textarea class="form-control" rows="4"
-                                        placeholder="Mesajınızı buraya yazınız..."></textarea>
-                                </div>
-
-                                <div class="text-center">
-                                    <button type="submit" class="button button--active">Talebi Gönder</button>
-                                </div>
-                            </form>
-                        </div>
+                <div class="modern-form-card">
+                    <div class="form-header text-center">
+                        <h3>Destek Talep Formu</h3>
+                        <p>Lütfen bilgileri eksiksiz doldurunuz.</p>
                     </div>
+
+                    <form id="iadeFormu" action="#" method="get">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="custom-label">Adınız Soyadınız</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ti-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control form-control-modern" placeholder="Tam adınız"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="custom-label">Sipariş Numarası</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ti-package"></i></span>
+                                    </div>
+                                    <input type="number" class="form-control form-control-modern"
+                                        placeholder="Örn: 12345" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="custom-label">İşlem Türü</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ti-direction-alt"></i></span>
+                                </div>
+                                <select class="form-control form-control-modern" required>
+                                    <option value="" selected disabled>Lütfen bir işlem seçiniz...</option>
+                                    <option value="iade">İade Etmek İstiyorum</option>
+                                    <option value="degisim">Değişim İstiyorum</option>
+                                    <option value="hatali">Eksik/Hasarlı Ürün Bildirimi</option>
+                                    <option value="kargo">Kargo/Teslimat Sorunu</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="custom-label">Detaylı Açıklama</label>
+                            <textarea class="form-control form-control-modern"
+                                style="height: 120px; border-radius: 8px !important;"
+                                placeholder="Lütfen yaşadığınız sorunu detaylı bir şekilde anlatınız..."
+                                required></textarea>
+                        </div>
+
+                        <div class="mt-4">
+                            <button type="submit" class="modern-btn">
+                                <i class="ti-check mr-2"></i> Başvuruyu Gönder
+                            </button>
+                        </div>
+                    </form>
                 </div>
+
 
             </div>
         </section>
@@ -296,7 +419,7 @@
                                     <span class="fa fa-code"></span>
                                     Tasarım
                                 </p>
-                                <p>Bu web sitesi: <strong>tayrubys</strong> tarafından tasarlanmıştır.</p>
+                                <p>Bu web sitesi: <strong>Şevval Ceren Yıldız</strong> tarafından tasarlanmıştır.</p>
 
                             </div>
                         </div>
