@@ -58,7 +58,7 @@
 
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+              <li class="nav-item active"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
 
               <li class="nav-item"><a class="nav-link" href="vizyonmisyon.html">Misyon &
@@ -92,7 +92,11 @@
             </ul>
 
             <ul class="nav-shop">
-              <li><button><i class="ti-search"></i></button></li>
+              <li>
+                <button onclick="window.location.href='admin.html'">
+                  <i class="ti-lock"></i>
+                </button>
+              </li>
               <li> <a href="cart.html">
                   <button>
                     <i class="ti-shopping-cart"></i>
@@ -295,12 +299,12 @@
       data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
       <div class="container">
         <div class="row">
-          <div class="col-xl-5">
+          <div class="col-xl-5 col-lg-6 col-md-8">
             <div class="offer__content text-center">
-              <h3>%50'ye Varan İndirim</h3>
-              <h4>Kış İndirimi</h4>
-              <p>Albümlerde sezon fırsatları sizi bekliyor.</p>
-              <a class="button button--active mt-3 mt-xl-4" href="#">Şimdi Alışveriş Yap</a>
+              <h3>Yeni Koleksiyon</h3>
+              <h4>Sezonun En İyileri</h4>
+              <p>Favori sanatçıların en son çıkan albümleri şimdi stoklarda.</p>
+              <a class="button button--active mt-3 mt-xl-4" href="#cok-satanlar">Şimdi Keşfet</a>
             </div>
           </div>
         </div>
@@ -309,7 +313,7 @@
     <!-- ================ offer section end ================= -->
 
     <!-- ================ Best Selling item  carousel ================= -->
-    <section class="section-margin calc-60px">
+    <section class="section-margin calc-60px" id="cok-satanlar">
       <div class="container">
         <div class="section-intro pb-60px">
           <p>Mağazadaki Popüler Albumler</p>
@@ -522,12 +526,10 @@
               </div>
             </div>
           </div>
-          <div class="row mt-5">
-            <div class="col-12 text-center">
-              <a href="duyurular.html" class="button button--active">Tüm Duyuruları Gör</a>
-            </div>
+          <div class="col-12 text-center">
+            <a href="duyurular.html" class="button button--active">Tüm Duyuruları Gör</a>
           </div>
-
+          <br>
         </div>
       </div>
       </div>
@@ -788,11 +790,25 @@
                   <span class="fa fa-share-alt"></span>
                   Sosyal Medya
                 </p>
-                <p class="social-links">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-instagram"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-youtube"></i></a>
+                <p class="social-links" style="display: flex; align-items: center; gap: 15px;">
+                  <a href="https://www.facebook.com/aroma.music" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+
+                  <a href="https://www.instagram.com/kou92official/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                      style="width: 20px; height: 20px; vertical-align: middle;">
+                  </a>
+
+                  <a href="https://twitter.com/aroma_music" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/X_icon_2.svg" alt="X"
+                      style="width: 18px; height: 18px; vertical-align: middle;">
+                  </a>
+                  <a href="https://www.youtube.com/c/kocaeli%C3%BCniversitesi" target="_blank">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+                      alt="YouTube" style="width: 25px; height: 18px; vertical-align: middle;">
+                  </a>
                 </p>
 
                 <p class="sm-head" style="margin-top: 15px;">
@@ -827,7 +843,7 @@
         items: 4,              // aynı anda kaç ürün görünsün
         loop: true,            // sürekli döngü
         autoplay: true,        // otomatik kaydırma
-        autoplayTimeout: 1000, // 3 saniyede bir
+        autoplayTimeout: 3000, // 3 saniyede bir
         autoplayHoverPause: true,
         nav: true,             // ok butonları
         dots: true,            // küçük noktalar
