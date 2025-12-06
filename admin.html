@@ -474,18 +474,18 @@
                 duyurular = [
                     {
                         id: 1,
-                        title: "100$ Üzeri Alışverişe %10 İndirim",
+                        title: "Poppy – Empty Hands Albümü Ön Siparişte!",
                         date: "2025-11-28",
-                        content: "Belirli ürünlerde geçerli büyük fırsat! Sepet toplamınız 100$ ve üzerine ulaştığında, toplam tutar üzerinden anında %10 indirim kazanacaksınız. Kupon kodu girmenize gerek yok, sistem otomatik düşer.",
-                        img: "album_img/indirim.png",
+                        content: "Poppy'nin merakla beklenen yeni stüdyo albümü 'Empty Hands' için geri sayım başladı. 23 Ocak 2026 çıkış tarihli albüm ön siparişe açıldı. İlk 100 siparişe poster hediye!",
+                        img: "album_img/empty.jpg",
                         document: { name: "indirim.pdf", icon: "fa-file-pdf" }
                     },
                     {
                         id: 2,
-                        title: "75$ Üzeri Alışverişe Kargo Ücretsiz",
-                        date: "2025-11-27",
-                        content: "Online mağazada geçerli ücretsiz kargo kampanyası başladı. Sepet tutarınız 75$ ve üzerine ulaştığında, kargo ücreti otomatik olarak tarafımızdan karşılanmaktadır.",
-                        img: "album_img/kargo.jpg",
+                        title: "Yeni Albüm Stokları Geldi",
+                        date: "2025-11-24",
+                        content: "Müzikseverlerin yoğun ilgisi nedeniyle tükenen birçok favori albüm, bu sabah itibarıyla depolarımıza tekrar giriş yaptı. Özellikle 'Ruby' albümü stoklarda!",
+                        img: "album_img/stok.jpg",
                         document: null
                     },
                     {
@@ -498,18 +498,18 @@
                     },
                     {
                         id: 4,
-                        title: "Yeni Albüm Stokları Geldi",
-                        date: "2025-11-24",
-                        content: "Müzikseverlerin yoğun ilgisi nedeniyle tükenen birçok favori albüm, bu sabah itibarıyla depolarımıza tekrar giriş yaptı. Özellikle 'Ruby' albümü stoklarda!",
-                        img: "album_img/stok.jpg",
+                        title: "75$ Üzeri Alışverişe Kargo Ücretsiz",
+                        date: "2025-11-27",
+                        content: "Online mağazada geçerli ücretsiz kargo kampanyası başladı. Sepet tutarınız 75$ ve üzerine ulaştığında, kargo ücreti otomatik olarak tarafımızdan karşılanmaktadır.",
+                        img: "album_img/kargo.jpg",
                         document: null
                     },
                     {
                         id: 5,
-                        title: "Poppy – Empty Hands Albümü Ön Siparişte!",
+                        title: "100$ Üzeri Alışverişe %10 İndirim",
                         date: "2025-11-22",
-                        content: "Poppy'nin merakla beklenen yeni stüdyo albümü 'Empty Hands' için geri sayım başladı. 23 Ocak 2026 çıkış tarihli albüm ön siparişe açıldı. İlk 100 siparişe poster hediye!",
-                        img: "album_img/empty.jpg",
+                        content: "Belirli ürünlerde geçerli büyük fırsat! Sepet toplamınız 100$ ve üzerine ulaştığında, toplam tutar üzerinden anında %10 indirim kazanacaksınız. Kupon kodu girmenize gerek yok, sistem otomatik düşer.",
+                        img: "album_img/indirim.jpg",
                         document: { name: "basin_bulteni.docx", icon: "fa-file-word" }
                     }
                 ];
@@ -531,24 +531,10 @@
             $('#duyuruList').html(html);
         }
 
-        /* function initUrunler() { renderUrunList(); }
-         function renderUrunList() {
-             let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
-             let html = '';
-             urunler.forEach(item => {
-                 html += `<tr><td><img src="${item.img}" class="product-thumb"></td><td><strong>${item.name}</strong><br><small>${item.category}</small></td><td>$${item.price}</td><td><button class="btn btn-danger btn-sm" onclick="deleteItem('aroma_urunler', ${item.id})"><i class="fas fa-trash"></i> Sil</button></td></tr>`;
-             });
-             $('#urunList').html(html);
-         }*/
-
-        //değişebilir
         function initUrunler() {
             let urunler = JSON.parse(localStorage.getItem('aroma_urunler'));
 
-            // Eğer GitHub'da veri yoksa, senin kopyaladığın verileri yükle:
             if (!urunler || urunler.length === 0) {
-
-                // 1. ADIMDA KOPYALADIĞIN VERİYİ AŞAĞIDAKİ KÖŞELİ PARANTEZLERİ SİLİP ORAYA YAPIŞTIR:
                 urunler = [{ "id": 1, "name": "Brat", "category": "Charli XCX", "price": "20.00", "img": "album_img/charlie/brat.jpeg" }, { "id": 2, "name": "Midnights", "category": "Taylor Swift", "price": "24.99", "img": "album_img/taylor'album/midnights.jpg" }, { "id": 3, "name": "Beautiful Chaos", "category": "Katseye", "price": "20.00", "img": "album_img/katseye.jpeg" }, { "id": 4, "name": "GUTS", "category": "Olivia Rodrigo", "price": "22.00", "img": "album_img/oliviarodrigo.jpeg" }, { "id": 5, "name": "Hurry Up Tomorrow", "category": "The Weeknd", "price": "22.00", "img": "album_img/theweeknd.jpeg" }, { "id": 6, "name": "Mayhem", "category": "Lady Gaga", "price": "24.00", "img": "album_img/207509-lady-gaga-mayhem.jpg" }, { "id": 7, "name": "Ruby", "category": "Jennie", "price": "24.99", "img": "album_img/jennie/jenniealbum.jpeg" }, { "id": 8, "name": "The Tortured Poets Department", "category": "Taylor Swift", "price": "27.99", "img": "album_img/taylor'album/thetorturedpoetsdep.jpeg" }, { "id": 9, "name": "Hit Me Hard and Soft", "category": "Billie Eilish", "price": "24.99", "img": "album_img/billie/billiealbum.jpeg" }, { "id": 10, "name": "Layover", "category": "V", "price": "21.99", "img": "album_img/Layover.jpeg" }, { "id": 11, "name": "Alligator Bites Never Heal", "category": "Doechii", "price": "20.00", "img": "album_img/doechii.jpeg" }, { "id": 12, "name": "Favourite Worst Nightmare", "category": "Arctic Monkeys", "price": "21.99", "img": "album_img/arcticmonkeys/fwn.jpeg" }, { "id": 13, "name": "After Hours", "category": "The Weeknd", "price": "23.99", "img": "album_img/afterhours.jpeg" }, { "id": 14, "name": "Sour", "category": "Olivia Rodrigo", "price": "21.99", "img": "album_img/sour.jpeg" }, { "id": 15, "name": "Supernatural", "category": "NewJeans", "price": "20.99", "img": "album_img/supernatural.jpeg" }, { "id": 16, "name": "how i'm feeling now", "category": "Charli XCX", "price": "24.00", "img": "album_img/charlie/how.jpeg" }, { "id": 17, "name": "Get Up", "category": "NewJeans", "price": "19.99", "img": "album_img/getup.jpeg" }, { "id": 18, "name": "Don't Smile at Me", "category": "Billie Eilish", "price": "17.99", "img": "album_img/billie/dsae.jpeg" }];
 
                 localStorage.setItem('aroma_urunler', JSON.stringify(urunler));
