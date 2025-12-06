@@ -340,21 +340,18 @@
 
     // Form gönderildiğinde çalışacak kod
     form.addEventListener('submit', function (event) {
-
-      // 1. Sayfanın yenilenmesini engelle (Standart submit işlemini durdur)
       event.preventDefault();
-
-      // 2. Girdileri al
+      //formdan verileri çekme
       var name = document.getElementById('name').value;
       var email = document.getElementById('email').value;
       var subject = document.getElementById('subject').value;
       var message = document.getElementById('message').value;
 
-      // 3. Basit Doğrulama: Alanlar boş mu?
+      // alanların boş olup olmadığını kontorl etme
       if (name === "" || email === "" || subject === "" || message === "") {
         alert("Lütfen tüm alanları doldurunuz!");
       } else {
-        // Bu işlem kullanıcının mail uygulamasını açar ve verileri oraya taşır.
+        // Bu işlem ile kullanıcının mail uygulamasını açar ve verileri oraya taşır.
         // encodeURIComponent: Türkçe karakterlerin linkte bozulmaması için kullanılır.
         var mailToLink = "mailto:info@aroma-music.com"
           + "?subject=" + encodeURIComponent(subject)
@@ -363,11 +360,10 @@
         // Mail uygulamasını açmaya çalış
         window.location.href = mailToLink;
 
-        // 5. Senin İsteğin: Ekrana bilgi mesajı ver
-        // (Mail uygulaması açıldıktan hemen sonra bu uyarı çıkar)
+        //Mail uygulaması açıldıktan hemen sonra bu uyarı çıkar
         setTimeout(function () {
           alert("Şikayetiniz/Öneriniz işleme alınmıştır. Mail uygulamanız üzerinden gönderimi tamamlayabilirsiniz.");
-          // 6. Formu temizle
+
           form.reset();
         }, 500); // Yarım saniye gecikmeli çalışır ki önce mail açılsın
       }

@@ -447,37 +447,44 @@
     <script src="vendors/mail-script.js"></script>
     <script src="js/main.js"></script>
 
+    <!--Sepet ürün miktarı güncelleme ve dinamik toplam tutar hesaplama işlemleri-->
     <script>
         $(document).ready(function () {
+            //sepet güncelleme fonksiyonu fiyatı dinamik yapmamızı sağlar
             function updateCart() {
                 let grandTotal = 0;
                 $('.cart-item').each(function () {
                     let price = parseFloat($(this).find('.unit-price').text());
                     let qty = parseInt($(this).find('.qty').val());
-                    if (isNaN(qty) || qty < 1) { qty = 1; $(this).find('.qty').val(1); }
+                    //negatif sayı girerse default olarak 1 olur
+                    if (isNaN(qty) || qty < 1) {
+                        qty = 1; $(this).find('.qty').val(1);
+                    }
 
                     let rowTotal = price * qty;
                     $(this).find('.row-total').text(rowTotal.toFixed(2));
                     grandTotal += rowTotal;
                 });
-
+                //buton işlemleri miktar artırma ve azaltma 
                 $('#cart-subtotal').text("$" + grandTotal.toFixed(2));
                 let finalTotal = grandTotal + 5;
                 $('#cart-final-total').text("$" + finalTotal.toFixed(2));
             }
-
+            //artırma butonu tıklandığında çalışır 
             $('.increase').click(function () {
                 let input = $(this).siblings('.qty');
                 input.val(parseInt(input.val()) + 1);
                 updateCart();
             });
-
+            //azaltma butonu tıklandığında çalışır 
             $('.reduced').click(function () {
                 let input = $(this).siblings('.qty');
                 let val = parseInt(input.val());
-                if (val > 1) { input.val(val - 1); updateCart(); }
+                if (val > 1) {
+                    input.val(val - 1); updateCart();
+                }
             });
-
+            //manuel giriş kontorlu
             $('.qty').on('change keyup', function () { updateCart(); });
             updateCart();
         });

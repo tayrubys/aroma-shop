@@ -515,19 +515,19 @@
     <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
 
     <script>
-        // DOSYA İSMİNİ GÜNCELLEYEN FONKSİYON
+        // Dosya ismini güncelleme fonksiyonu
         function updateFileName(input, spanId) {
             var fileName = input.files[0] ? input.files[0].name : "Dosya seçilmedi";
             document.getElementById(spanId).innerText = fileName;
         }
-
+        // Sayfa yüklendiğinde gerekli başlangıç fonksiyonlarını çalıştır
         $(document).ready(function () {
             initDuyurular();
             initUrunler();
             renderCharts();
             updateStats();
 
-            // --- ÜRÜN EKLEME ---
+            // --- ürün ekleme ---
             $('#addUrunForm').on('submit', function (e) {
                 e.preventDefault();
                 let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
@@ -545,7 +545,7 @@
                 alert('Ürün eklendi!');
             });
 
-            // --- DUYURU EKLEME ---
+            // --- duyuru ekleme ---
             $('#addDuyuruForm').on('submit', function (e) {
                 e.preventDefault();
 
@@ -591,7 +591,7 @@
             });
         });
 
-        // --- CHART JS ---
+        // Satış ve Kategori grafiklerini Chart.js ile oluştururma 
         function renderCharts() {
             const ctx1 = document.getElementById('salesChart').getContext('2d');
             new Chart(ctx1, {
@@ -616,7 +616,7 @@
                 }
             });
         }
-
+        //Dashboard üzerindeki toplam sayı kartlarını günceller
         function updateStats() {
             let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
             let duyurular = JSON.parse(localStorage.getItem('aroma_duyurular')) || [];
@@ -624,7 +624,7 @@
             $('#statTotalDuyuru').text(duyurular.length);
         }
 
-
+        //duyuru verileriniLocalStorage'dan çeker
         function initDuyurular() {
             let duyurular = JSON.parse(localStorage.getItem('aroma_duyurular'));
 
@@ -676,6 +676,7 @@
             }
             renderDuyuruList();
         }
+        //duyuruları tarihe göre sıralar
         function renderDuyuruList() {
             let duyurular = JSON.parse(localStorage.getItem('aroma_duyurular')) || [];
             let html = '';
@@ -689,7 +690,7 @@
             });
             $('#duyuruList').html(html);
         }
-
+        //ürün verilerini LocalStorage'dan çeker
         function initUrunler() {
             let urunler = JSON.parse(localStorage.getItem('aroma_urunler'));
 
@@ -701,7 +702,7 @@
 
             renderUrunList();
         }
-
+        //urun verilerini çeker
         function renderUrunList() {
             let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
             let html = '';
@@ -710,6 +711,7 @@
             });
             $('#urunList').html(html);
         }
+        //Verilen key ve id'ye göre öğeyi siler
         function deleteItem(key, id) {
             if (confirm('Silinsin mi?')) {
                 let items = JSON.parse(localStorage.getItem(key)) || [];
