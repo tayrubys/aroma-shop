@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aroma Shop - Birim</title>
+    <title>Aroma Shop - Login</title>
     <link rel="icon" href="img/Fevicon.png" type="image/png">
     <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
     <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
+    <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
+
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                            <li class="nav-item "><a class="nav-link" href="index.html">Ana Sayfa</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
 
                             <li class="nav-item"><a class="nav-link" href="vizyonmisyon.html">Misyon &
@@ -91,121 +91,73 @@
             </nav>
         </div>
     </header>
-    <!--================End Header Menu Area =================-->
+    <!--================ End Header Menu Area =================-->
 
-    <main class="site-main">
-        <!--================ Start Banner Area =================-->
-        <section class="blog-banner-area" id="category">
-            <div class="container h-100">
-                <div class="blog-banner">
-                    <div class="text-center">
-                        <h1>Lojistik ve Dağıtım Birimi</h1>
-                        <nav aria-label="breadcrumb" class="banner-breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Birimlerimiz</li>
-                            </ol>
-                        </nav>
+    <!-- ================ start banner area ================= -->
+    <section class="blog-banner-area" id="category">
+        <div class="container h-100">
+            <div class="blog-banner">
+                <div class="text-center">
+                    <h1>Giriş Yap</h1>
+                    <nav aria-label="breadcrumb" class="banner-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Giriş</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ end banner area ================= -->
+
+    <!--================Login Box Area =================-->
+    <section class="login_box_area section-margin">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="login_box_img">
+                        <div class="hover">
+                            <h4>Web sitemizde yeni misiniz?</h4>
+                            <p>"Müzik tutkunuza ortak olalım! En sevdiğiniz sanatçıların albümlerine hızlıca ulaşmak,
+                                koleksiyonunuzu genişletmek ve müziğin ritmini yakalamak için hemen ücretsiz hesabınızı
+                                oluşturun."</p>
+                            <a class="button button-account" href="register.html">Hesap Oluştur</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="login_form_inner">
+                        <h3>Giriş Yap</h3>
+                        <form class="row login_form" action="#/" id="contactForm">
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Username"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Kullanıcı Adı'">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Password"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Şifre'">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div class="creat_account">
+                                    <input type="checkbox" id="f-option2" name="selector">
+                                    <label for="f-option2">Beni Hatırla</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" value="submit" class="button button-login w-100">Giriş
+                                    Yap</button>
+                                <a href="#">Şifremi Unuttum</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--================End Banner Area =================-->
+        </div>
+    </section>
+    <!--================End Login Box Area =================-->
 
-        <!--===== Başlangıç Depo, Sevkiyat ve Teslimat Bilgileri Bölümü ======-->
-        <section class="section-margin calc-60px">
-            <div class="container">
 
-                <div class="row mb-5">
-                    <div class="col-lg-12">
-                        <h3>Depo ve Sevkiyat İşlemleri</h3>
-                        <p>Aroma Shop lojistik birimi olarak, Kocaeli'deki merkez depomuzdan Türkiye'nin her yerine
-                            albüm gönderimi yapmaktayız. Ürünlerin hasar görmemesi için özel paketleme yöntemleri
-                            kullanıyoruz.</p>
-                    </div>
-                </div>
-                <!--=== Başlangıç: Sipariş Hazırlama Süreci ve Birim Sorumluları Bölümü ==-->
-
-                <div class="row mb-5">
-                    <div class="col-lg-6">
-                        <div style="background-color: #f8f9fa; padding: 30px; border-radius: 10px;">
-                            <h4><i class="ti-package"></i> Sipariş Hazırlama Süreci</h4>
-                            <p>Bir sipariş geldiğinde şu adımlar izlenir:</p>
-                            <ol class="pl-4">
-                                <li class="mb-2">Siparişin sistemden onaylanması.</li>
-                                <li class="mb-2">Ürünün raftan bulunup kalite kontrolünün yapılması.</li>
-                                <li class="mb-2">Balonlu naylon (pıt pıt) ile sarılması.</li>
-                                <li class="mb-2">Özel kutuya yerleştirilip faturanın eklenmesi.</li>
-                                <li>Kargo firmasına teslim edilmesi.</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div style="background-color: #e8f0f2; padding: 30px; border-radius: 10px; height: 100%;">
-                            <h4><i class="ti-user"></i> Birim Sorumluları</h4>
-                            <p>Lojistik departmanımızda çalışan ekibimiz:</p>
-                            <ul class="pl-4">
-                                <li class="mb-2"><strong>Depo Sorumlusu:</strong> Ahmet Yılmaz</li>
-                                <li class="mb-2"><strong>Paketleme Şefi:</strong> Ayşe Demir</li>
-                                <li><strong>Sevkiyat Görevlisi:</strong> Mehmet Kaya</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--======Sipariş Hazırlama Süreci ve Birim Sorumluları Bölümünün Sonu ======-->
-
-                <!--=====  Teslimat Süreleri ve Kargo Ücretleri Tablosunun Başalngıcı ========-->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h3 class="mb-4">Tahmini Teslimat Süreleri ve Ücretler</h3>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th>Bölge</th>
-                                        <th>Tahmini Süre</th>
-                                        <th>Kargo Ücreti</th>
-                                        <th>Kargo Firması</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Marmara Bölgesi</td>
-                                        <td>1-2 İş Günü</td>
-                                        <td>50 TL</td>
-                                        <td>Aras / Yurtiçi</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ege / İç Anadolu</td>
-                                        <td>2-3 İş Günü</td>
-                                        <td>60 TL</td>
-                                        <td>Aras / Yurtiçi</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Doğu / Güneydoğu</td>
-                                        <td>3-4 İş Günü</td>
-                                        <td>70 TL</td>
-                                        <td>PTT Kargo</td>
-                                    </tr>
-                                    <tr>
-                                        <td>75$ Üzeri Siparişler</td>
-                                        <td>Standart Süre</td>
-                                        <td><span style="color:green; font-weight:bold;">ÜCRETSİZ</span></td>
-                                        <td>Tümü</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="mt-2"><small>* Hava koşullarına göre teslimat süreleri değişebilir.</small></p>
-                    </div>
-                </div>
-                <!--=====Teslimat Süreleri ve Kargo Ücretleri Tablosunun Bitişi========-->
-
-            </div>
-        </section>
-        <!--=====  Depo, Sevkiyat ve Teslimat Bilgileri Bölümünün Bitişi ========-->
-    </main>
 
     <!--================ Start footer Area  =================-->
     <footer class="footer">
@@ -327,11 +279,14 @@
     <!--================ End footer Area  =================-->
 
 
+
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="vendors/skrollr.min.js"></script>
     <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
     <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="vendors/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/mail-script.js"></script>
     <script src="js/main.js"></script>
 </body>
 

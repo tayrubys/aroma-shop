@@ -1,0 +1,28 @@
+   .social-links {
+       display: flex;
+       gap: 15px;
+   }
+
+   .social-btn {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 45px;
+       height: 45px;
+       background-color: #002147;
+       border-radius: 50%;
+
+       text-decoration: none;
+       transition: transform 0.2s ease;
+   }
+
+   .social-btn i {
+       font-size: 20px;
+       color: #175fb1;
+   }
+
+   /*hover*/
+   .social-btn:hover {
+       transform: translateY(-3px);
+       background-color: #f0f0f0;
+   }
