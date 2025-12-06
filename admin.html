@@ -10,8 +10,42 @@
     <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--sosyal medya iconları için-->
+    <style>
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            background-color: #002147;
+            border-radius: 50%;
+
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .social-btn i {
+            font-size: 20px;
+            color: #175fb1;
+        }
+
+        /*hover*/
+        .social-btn:hover {
+            transform: translateY(-3px);
+            background-color: #f0f0f0;
+        }
+    </style>
 
     <style>
         .admin-card {
@@ -145,7 +179,7 @@
 </head>
 
 <body class="bg-light">
-
+    <!--================ Start header menu Area  =================-->
     <header class="header_area">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -172,28 +206,32 @@
             </nav>
         </div>
     </header>
+    <!--================ end header menu Area  =================-->
 
     <div class="container mt-5">
         <div class="section-intro pb-40px text-center">
             <h2>Admin <span class="section-intro__style">Yönetim Paneli</span></h2>
         </div>
-
+        <!--================ admin paneli sekme menusu =================-->
         <ul class="nav nav-tabs mb-4" id="adminTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="dash-tab" data-toggle="tab" href="#dashboardPanel" role="tab">📊
+                <a class="nav-link active" id="dash-tab" data-toggle="tab" href="#dashboardPanel" role="tab"><i
+                        class="fas fa-chart-pie mr-2"></i>
                     İstatistikler</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="duyuru-tab" data-toggle="tab" href="#duyuruPanel" role="tab">📢 Duyuru
+                <a class="nav-link" id="duyuru-tab" data-toggle="tab" href="#duyuruPanel" role="tab"><i
+                        class="fas fa-bullhorn mr-2"></i> Duyuru
                     İşlemleri</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="urun-tab" data-toggle="tab" href="#urunPanel" role="tab">🎵 Ürün İşlemleri</a>
+                <a class="nav-link" id="urun-tab" data-toggle="tab" href="#urunPanel" role="tab"><i
+                        class="fas fa-music mr-2"></i>Ürün İşlemleri</a>
             </li>
         </ul>
-
+        <!--================ admin paneli sekme menusu bitiş =================-->
         <div class="tab-content" id="myTabContent">
-
+            <!--================ dashboard paneli başlangıcı =================-->
             <div class="tab-pane fade show active" id="dashboardPanel" role="tabpanel">
                 <div class="row">
                     <div class="col-md-3">
@@ -240,7 +278,9 @@
                     </div>
                 </div>
             </div>
+            <!--================ dashboard paneli bitişi =================-->
 
+            <!--================ duyuru paneli başlangıcı =================-->
             <div class="tab-pane fade" id="duyuruPanel" role="tabpanel">
                 <div class="row">
                     <div class="col-lg-4">
@@ -308,7 +348,9 @@
                     </div>
                 </div>
             </div>
+            <!--================ duyuru paneli bitişi =================-->
 
+            <!--================ ürün paneli başlangıcı =================-->
             <div class="tab-pane fade" id="urunPanel" role="tabpanel">
                 <div class="row">
                     <div class="col-lg-4">
@@ -348,10 +390,123 @@
                     </div>
                 </div>
             </div>
-
+            <!--================ ürün paneli bitişi =================-->
         </div>
     </div>
+    <!--================ Start footer Area  =================-->
+    <footer class="footer">
+        <div class="footer-area">
+            <div class="container">
+                <div class="row section_gap">
 
+                    <!-- Mission -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget tp_widgets">
+                            <h4 class="footer_title large_title">Biz Kimiz?</h4>
+                            <p>
+                                Aroma, dünya müziğinin en sevilen yabancı albümlerini kolayca bulup
+                                keşfedebileceğiniz modern ve kullanıcı dostu bir albüm satış platformudur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+                        <div class="single-footer-widget tp_widgets">
+                            <h4 class="footer_title">Hızlı Linkler</h4>
+                            <ul class="list">
+                                <li><a href="index.html">Ana Sayfa</a></li>
+                                <li><a href="categoryttumalbum.html">Albüm Mağazası</a></li>
+                                <li><a href="#">Duyurular</a></li>
+                                <li><a href="about.html">Hakkımızda</a></li>
+                                <li><a href="contact.html">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Contact + Social -->
+                    <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget tp_widgets">
+                            <h4 class="footer_title">İletişim</h4>
+                            <div class="ml-40">
+
+                                <p class="sm-head">
+                                    <span class="fa fa-location-arrow"></span>
+                                    Adres
+                                </p>
+                                <p>Kocaeli, Türkiye <br>Cumhuriyet Cd. İzmit Merkez</p>
+
+                                <p class="sm-head">
+                                    <span class="fa fa-phone"></span>
+                                    Telefon
+                                </p>
+                                <p>
+                                    +90 555 555 55 55 <br>
+                                    +90 212 555 55 55
+                                </p>
+
+                                <p class="sm-head">
+                                    <span class="fa fa-envelope"></span>
+                                    E-mail
+                                </p>
+                                <p>
+                                    info@aroma-music.com <br>
+                                    www.aroma-music.com
+                                </p>
+
+                                <p class="sm-head">
+                                    <span class="fa fa-share-alt"></span>
+                                    Sosyal Medya
+                                </p>
+                                <div class="social-wrapper">
+                                    <div class="social-links">
+
+                                        <a href="https://www.facebook.com/kou92official/?locale=tr_TR" target="_blank"
+                                            class="social-btn">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+
+                                        <a href="https://www.instagram.com/kou92official/" target="_blank"
+                                            class="social-btn">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+
+                                        <a href="https://x.com/kou92official" target="_blank" class="social-btn">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+
+                                        <a href="https://www.youtube.com/c/kocaeli%C3%BCniversitesi" target="_blank"
+                                            class="social-btn">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <p class="sm-head" style="margin-top: 15px;">
+                                    <span class="fa fa-code"></span>
+                                    Tasarım
+                                </p>
+                                <p>Bu web sitesi: <strong>Şevval Ceren Yıldız</strong> tarafından tasarlanmıştır.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="footer-text text-center">
+                        ©
+                        <script>document.write(new Date().getFullYear());</script>
+                        Aroma Albüm Satış Sitesi – Tüm Hakları Saklıdır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--================End footer Area  =================-->
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
 

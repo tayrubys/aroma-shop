@@ -15,6 +15,40 @@
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
   <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!--sosyal medya iconları için-->
+  <style>
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      background-color: #002147;
+      border-radius: 50%;
+
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .social-btn i {
+      font-size: 20px;
+      color: #175fb1;
+    }
+
+    /*hover*/
+    .social-btn:hover {
+      transform: translateY(-3px);
+      background-color: #f0f0f0;
+    }
+  </style>
+
   <style>
     .arctic-banner {
       background: linear-gradient(135deg, #2c2c2c, #8b0000);
@@ -127,6 +161,7 @@
     </div>
   </header>
   <!--================ End Header Menu Area =================-->
+
   <!-- ================ start banner area ================= -->
   <section class="blog-banner-area" id="category">
     <div class="container h-100">
@@ -146,12 +181,11 @@
   </section>
   <!-- ================ end banner area ================= -->
 
-
-  <!-- ================ category section start ================= -->
+  <!-- ================ section start ================= -->
   <section class="section-margin--small mb-5">
     <div class="container">
       <div class="row">
-
+        <!-- Start arc monkey slider -->
         <div class="col-lg-3">
           <div class="sidebar-banner arctic-banner">
             <img src="album_img/arcticmonkeys/arcticmonkeys.jpeg" alt="Arctic Monkeys" class="arctic-img">
@@ -162,9 +196,9 @@
             </p>
           </div>
         </div>
-
+        <!-- end arc monkey slider -->
         <div class="col-xl-9 col-lg-8 col-md-7">
-          <!-- Start Best Seller -->
+          <!-- Start albumler -->
           <section class="lattest-product-area pb-40 category-list">
             <div class="row">
               <div class="col-md-6 col-lg-4">
@@ -266,12 +300,13 @@
               </div>
             </div>
           </section>
-          <!-- End Best Seller -->
+          <!-- End albumler -->
         </div>
       </div>
     </div>
   </section>
-  <!-- ================ category section end ================= -->
+  <!-- ================  section end ================= -->
+
   <!--================ Start footer Area  =================-->
   <footer class="footer">
     <div class="footer-area">
@@ -312,7 +347,7 @@
                   <span class="fa fa-location-arrow"></span>
                   Adres
                 </p>
-                <p>Kocaeli, Türkiye</p>
+                <p>Kocaeli, Türkiye <br>Cumhuriyet Cd. İzmit Merkez</p>
 
                 <p class="sm-head">
                   <span class="fa fa-phone"></span>
@@ -336,26 +371,27 @@
                   <span class="fa fa-share-alt"></span>
                   Sosyal Medya
                 </p>
-                <p class="social-links" style="display: flex; align-items: center; gap: 15px;">
-                  <a href="https://www.facebook.com/aroma.music" target="_blank">
-                    <i class="fa fa-facebook"></i>
-                  </a>
+                <div class="social-wrapper">
+                  <div class="social-links">
 
-                  <a href="https://www.instagram.com/kou92official/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
-                      style="width: 20px; height: 20px; vertical-align: middle;">
-                  </a>
+                    <a href="https://www.facebook.com/kou92official/?locale=tr_TR" target="_blank" class="social-btn">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
 
-                  <a href="https://twitter.com/aroma_music" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/X_icon_2.svg" alt="X"
-                      style="width: 18px; height: 18px; vertical-align: middle;">
-                  </a>
-                  <a href="https://www.youtube.com/c/kocaeli%C3%BCniversitesi" target="_blank">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
-                      alt="YouTube" style="width: 25px; height: 18px; vertical-align: middle;">
-                  </a>
-                </p>
+                    <a href="https://www.instagram.com/kou92official/" target="_blank" class="social-btn">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="https://x.com/kou92official" target="_blank" class="social-btn">
+                      <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/c/kocaeli%C3%BCniversitesi" target="_blank" class="social-btn">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+
+                  </div>
+                </div>
 
                 <p class="sm-head" style="margin-top: 15px;">
                   <span class="fa fa-code"></span>
@@ -382,9 +418,6 @@
     </div>
   </footer>
   <!--================ End footer Area  =================-->
-
-  <!--================ End footer Area  =================-->
-
 
 
 

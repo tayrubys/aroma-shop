@@ -11,6 +11,39 @@
     <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--sosyal medya iconları için-->
+    <style>
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            background-color: #002147;
+            border-radius: 50%;
+
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .social-btn i {
+            font-size: 20px;
+            color: #175fb1;
+        }
+
+        /*hover*/
+        .social-btn:hover {
+            transform: translateY(-3px);
+            background-color: #f0f0f0;
+        }
+    </style>
 
     <style>
         .about-section {
@@ -73,7 +106,7 @@
             font-size: 18px;
         }
 
-        /* --- YENİ EKLENEN MODERN İSTATİSTİK BÖLÜMÜ CSS --- */
+        /* İSTATİTİK BOLUMU İÇİN */
         .stats-section {
             padding: 100px 0;
             background-color: #f6f8fd;
@@ -211,7 +244,9 @@
             </nav>
         </div>
     </header>
+    <!--================ End Header Menu Area =================-->
 
+    <!--================ Start banner Area  =================-->
     <section class="blog-banner-area" id="about">
         <div class="container h-100">
             <div class="blog-banner">
@@ -227,15 +262,19 @@
             </div>
         </div>
     </section>
+    <!--================ end banner Area  =================-->
+
 
     <section class="about-section">
         <div class="container">
             <div class="row align-items-center">
+                <!--================ mağaza gorselı  =================-->
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="about-img">
                         <img class="img-fluid" src="album_img/aroma.jpg" alt="Aroma Shop Mağaza İçi">
                     </div>
                 </div>
+                <!-- === Hakkımızda Bölümünün metin içeriği === -->
                 <div class="col-lg-6">
                     <div class="about-content pl-lg-4">
                         <span class="sub-title">Hikayemiz</span>
@@ -264,7 +303,7 @@
             </div>
         </div>
     </section>
-
+    <!--================Start mağazanın istatik bölümü  =================-->
     <section class="stats-section">
         <div class="container">
             <div class="section-intro pb-60px text-center">
@@ -315,6 +354,9 @@
             </div>
         </div>
     </section>
+    <!--================End mağazanın istatik bölümü  =================-->
+
+    <!--================Start footer Area  =================-->
     <footer class="footer">
         <div class="footer-area">
             <div class="container">
@@ -354,7 +396,7 @@
                                     <span class="fa fa-location-arrow"></span>
                                     Adres
                                 </p>
-                                <p>Kocaeli, Türkiye</p>
+                                <p>Kocaeli, Türkiye <br>Cumhuriyet Cd. İzmit Merkez</p>
 
                                 <p class="sm-head">
                                     <span class="fa fa-phone"></span>
@@ -378,25 +420,30 @@
                                     <span class="fa fa-share-alt"></span>
                                     Sosyal Medya
                                 </p>
-                                <p class="social-links" style="display: flex; align-items: center; gap: 15px;">
-                                    <a href="https://www.facebook.com/aroma.music" target="_blank">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
+                                <div class="social-wrapper">
+                                    <div class="social-links">
 
-                                    <a href="https://www.instagram.com/kou92official/" target="_blank">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                                            alt="Instagram" style="width: 20px; height: 20px; vertical-align: middle;">
-                                    </a>
+                                        <a href="https://www.facebook.com/kou92official/?locale=tr_TR" target="_blank"
+                                            class="social-btn">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
 
-                                    <a href="https://twitter.com/aroma_music" target="_blank">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/X_icon_2.svg"
-                                            alt="X" style="width: 18px; height: 18px; vertical-align: middle;">
-                                    </a>
-                                    <a href="https://www.youtube.com/c/kocaeli%C3%BCniversitesi" target="_blank">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
-                                            alt="YouTube" style="width: 25px; height: 18px; vertical-align: middle;">
-                                    </a>
-                                </p>
+                                        <a href="https://www.instagram.com/kou92official/" target="_blank"
+                                            class="social-btn">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+
+                                        <a href="https://x.com/kou92official" target="_blank" class="social-btn">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+
+                                        <a href="https://www.youtube.com/c/kocaeli%C3%BCniversitesi" target="_blank"
+                                            class="social-btn">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
 
                                 <p class="sm-head" style="margin-top: 15px;">
                                     <span class="fa fa-code"></span>
@@ -430,7 +477,7 @@
     <script>
         $(document).ready(function () {
 
-            // 1. Admin Panelindeki Veriyi Çek (LocalStorage)
+            //  Admin Panelindeki Veriyi Çek (LocalStorage)
             let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
             let gercekSayi = urunler.length;
 
@@ -440,7 +487,7 @@
             // HTML'e hedef sayıyı ata
             $('#dynamicAlbumCount').attr('data-target', gercekSayi);
 
-            // 2. Sayaç Animasyonu Fonksiyonu
+            //  Sayaç Animasyonu Fonksiyonu
             const runCounter = () => {
                 $('.counter').each(function () {
                     var $this = $(this),
@@ -462,7 +509,7 @@
                 });
             }
 
-            // 3. Ekrana geldiğinde çalıştır (Scroll Event)
+            // Ekrana geldiğinde çalıştır (Scroll Event)
             let counted = false;
             $(window).scroll(function () {
                 // Bölüm ekranda var mı kontrol et
