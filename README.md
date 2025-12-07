@@ -27,7 +27,7 @@ Projenin geliştirilmesinde aşağıdaki modern web teknolojileri ve kütüphane
 
 Projenin sayfa hiyerarşisi ve kullanıcı akışı aşağıdaki gibidir:
 
-![Sistem Akış Diyagramı](img/sistem-akis-diyagrami.png)
+![Sistem Akış Diyagramı](img/sistemakisdiyagrami.png)
 
 ---
 
