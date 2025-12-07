@@ -6,9 +6,9 @@ Modern, responsive ve kullanıcı deneyimi odaklı bir e-ticaret arayüz projesi
 
 **Aroma Shop**, kullanıcıların müzik albümlerini inceleyebildiği, kategorilere göre filtreleme yapabildiği ve modern bir arayüz üzerinden etkileşim sağlayabildiği bir **Front-End (Ön Yüz)** web projesidir.
 
-Proje; ürün listeleme, detay görüntüleme, sepet yönetimi ve görsel bileşenler üzerine odaklanmıştır. **Web Tasarımı** dersi kapsamında geliştirilen bu uygulama, e-ticaret mantığını görsel olarak simüle eder.
+Proje; ürün listeleme, detay görüntüleme, sepet yönetimi ve görsel bileşenler üzerine odaklanmıştır. **Web Tasarımı** dersi için geliştirilen bu uygulama, e-ticaret mantığını görsel olarak simüle eder.
 
-**Önemli Not:** Bu proje yalnızca arayüz (UI) geliştirmeye yöneliktir. Arka uç (Back-End), gerçek stok yönetimi veya veritabanı bağlantısı **bulunmamaktadır**. Admin paneli ve satın alma işlemleri tasarımsal bir demo (simülasyon) niteliğindedir.
+**Önemli Not:** Bu proje yalnızca arayüz (UI) geliştirmeye yöneliktir. Arka uç (Back-End), gerçek stok yönetimi veya veritabanı bağlantısı **bulunmamaktadır**. Admin paneli ve satın alma işlemleri tasarımsal bir simülasyon niteliğindedir.
 
 ---
 
