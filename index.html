@@ -325,7 +325,7 @@
           <p>Mağazadaki Popüler Albumler</p>
           <h2>Çok <span class="section-intro__style">Satanlar</span></h2>
         </div>
-        <div class="owl-carousel owl-theme" id="bestSellerCarousel">
+        <div class="owl-theme" id="bestSellerCarousel">
           <div class="card text-center card-product">
             <div class="card-product__img">
               <img class="img-fluid" src="album_img/taylor'album/midnights.jpg" alt="">
@@ -854,11 +854,15 @@
   <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
   <script src="vendors/jquery.ajaxchimp.min.js"></script>
   <script src="vendors/mail-script.js"></script>
-  <script src="js/main.js"></script>
   <script src="js/index.js"></script>
+
+  <script src="js/main.js"></script>
   <!--slider hareketi-->
   <script>
     $(document).ready(function () {
+
+      var slider = $("#bestSellerCarousel");
+      slider.addClass('owl-carousel');
       $("#bestSellerCarousel").owlCarousel({
         items: 4,              // aynı anda kaç ürün görünsün
         loop: true,            // sürekli döngü
