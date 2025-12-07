@@ -27,7 +27,7 @@ Projenin geliştirilmesinde aşağıdaki modern web teknolojileri ve kütüphane
 
 Projenin sayfa hiyerarşisi ve kullanıcı akışı aşağıdaki gibidir:
 
-![Sistem Akış Diyagramı](img/sistemakisdiyagrami.png)
+![Sistem Akış Diyagramı](https://github.com/tayrubys/aroma-shop/blob/d58a61402b574fa238218c4a599b922f0c1500aa/sistemakisdiyagrami.png)
 
 ---
 
