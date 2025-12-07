@@ -309,6 +309,13 @@
                         <h3>Destek Talep Formu</h3>
                         <p>Lütfen bilgileri eksiksiz doldurunuz.</p>
                     </div>
+                    <!--başarı mesajı-->
+                    <div id="basariMesaji" class="alert alert-success text-center" role="alert"
+                        style="display: none; margin-bottom: 20px;">
+                        <h4 class="alert-heading"><i class="ti-check"></i> Başarılı!</h4>
+                        <p>Talebiniz başarıyla alınmıştır. Müşteri temsilcimiz en kısa sürede size dönüş yapacaktır.</p>
+                    </div>
+                    <!--başarı mesajı bitiş-->
 
                     <form id="iadeFormu" action="#" method="get">
                         <div class="form-row">
@@ -495,9 +502,9 @@
         document.getElementById('iadeFormu').addEventListener('submit', function (event) {
             event.preventDefault();
             var alertKutusu = document.getElementById('basariMesaji');
-            // Alert kutusunu görünür yapmamızı sağlar
+            // Alert kutusunu görünür yap
             alertKutusu.style.display = 'block';
-            // 4. Sayfayı alertin olduğu yere kaydırılması
+            // Sayfayı alertin olduğu yere kaydırılması
             alertKutusu.scrollIntoView({ behavior: 'smooth', block: 'center' });
             this.reset();
             setTimeout(function () {

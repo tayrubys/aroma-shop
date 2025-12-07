@@ -485,11 +485,11 @@
     <!--dinamik istatistik sayacı-->
     <script>
         $(document).ready(function () {
-            //  Admin Panelindeki Veriyi Çek (LocalStorage)
+            //  Admin Panelindeki Veriyi Çek LocalStorage
             let urunler = JSON.parse(localStorage.getItem('aroma_urunler')) || [];
             let gercekSayi = urunler.length;
 
-            // Eğer hiç ürün yoksa (admin panel boşsa) 0 yerine varsayılan bir sayı
+            // Eğer hiç ürün yoksa yani admin panel boşsa 0 yerine varsayılan bir sayı
             if (gercekSayi === 0) gercekSayi = 150;
 
             // HTML'e hedef sayıyı ata
@@ -517,7 +517,7 @@
                 });
             }
 
-            // Ekrana geldiğinde çalıştır (Scroll Event)
+            // Ekrana geldiğinde çalıştır 
             let counted = false;
             $(window).scroll(function () {
                 // Bölüm ekranda var mı kontrol et
