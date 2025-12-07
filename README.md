@@ -41,7 +41,7 @@ AROMA-SHOP
 ├── album_img/                 # Albümlere ait ürün görselleri
 ├── Aroma Shop-doc/            # Proje teknik dokümanları
 ├── css/                       # Stil dosyaları (style.css vb.)
-├── img/                       # Genel site görselleri (Logo, banner vb.)
+├── img/                      
 ├── js/                        # JavaScript dosyaları (Slider, sepet mantığı vb.)
 ├── scss/                      # SCSS kaynak dosyaları
 ├── vendors/                   # Harici CSS/JS kütüphaneleri (Owl Carousel vb.)
